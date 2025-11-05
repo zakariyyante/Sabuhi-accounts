@@ -11,7 +11,7 @@ export default function Footer() {
             {/* Website Logo */}
             <div className="relative w-56 h-14">
               <Image
-                src="/logos/winfastcasinos-new-logo.svg"
+                src="/logos/ukcasinokings-logo.svg"
                 alt={siteConfig.name}
                 fill
                 className="object-contain"

@@ -1,0 +1,32 @@
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Crown Icon -->
+  <g transform="translate(0, 8)">
+    <path d="M20 35L12 28L8 32L12 20L8 16L16 20L20 12L24 20L32 16L28 20L32 32L28 28L20 35Z" fill="#F59E0B"/>
+    <path d="M20 35L12 28L8 32L12 20L8 16L16 20L20 12L24 20L32 16L28 20L32 32L28 28L20 35Z" fill="url(#crownGradient)" opacity="0.7"/>
+    <circle cx="20" cy="14" r="2" fill="#FBBF24"/>
+    <circle cx="12" cy="18" r="1.5" fill="#FBBF24"/>
+    <circle cx="28" cy="18" r="1.5" fill="#FBBF24"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="45" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#F9FAFB">
+    UK CASINO
+  </text>
+  <text x="45" y="48" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#textGradient)">
+    KINGS
+  </text>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="crownGradient" x1="8" y1="12" x2="32" y2="35" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+</svg>
+
