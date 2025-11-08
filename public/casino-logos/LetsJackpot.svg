@@ -1,0 +1,14 @@
+<svg width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="80" rx="8" fill="#1a1a2e"/>
+  <rect x="2" y="2" width="196" height="76" rx="6" fill="url(#gradient1)"/>
+  <text x="100" y="30" font-family="Arial Black, sans-serif" font-size="18" font-weight="900" fill="#FFD700" text-anchor="middle">LetsJackpot</text>
+  <text x="100" y="50" font-family="Arial, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">CASINO</text>
+  <circle cx="30" cy="40" r="8" fill="#FFD700"/>
+  <circle cx="170" cy="40" r="8" fill="#FFD700"/>
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f3460"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -3,15 +3,15 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#111827] to-[#1F2937] border-t border-[#7C3AED]/30">
+    <footer className="bg-gradient-to-b from-[#0F172A] to-[#1E293B] border-t border-[#0D9488]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Logo and Branding */}
-        <div className="py-8 border-b border-[#7C3AED]/30">
+        <div className="py-8 border-b border-[#0D9488]/30">
           <div className="flex items-center mb-4">
             {/* Website Logo */}
-            <div className="relative w-56 h-14">
+            <div className="relative w-64 h-14">
               <Image
-                src="/logos/ukcasinokings-logo.svg"
+                src="/logos/top15bestcasinosuk-logo.svg"
                 alt={siteConfig.name}
                 fill
                 className="object-contain"
@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-gray-300 text-sm max-w-2xl leading-relaxed">
-            Your trusted source for UK Gambling Commission authorized online casinos. We provide independent reviews and comparisons featuring only UK-licensed platforms helping UK players find safe, regulated gaming destinations.
+            Your definitive guide to the top 15 UK Gambling Commission licensed online casinos. We offer unbiased evaluations and detailed comparisons of premium UK-regulated platforms, helping British players locate trustworthy gaming sites.
           </p>
         </div>
 
@@ -29,8 +29,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Pages</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-300 hover:text-[#F59E0B] text-sm transition-colors">Home</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-[#F59E0B] text-sm transition-colors">About</a></li>
+              <li><a href="/" className="text-gray-300 hover:text-[#14B8A6] text-sm transition-colors">Home</a></li>
+              <li><a href="/about" className="text-gray-300 hover:text-[#14B8A6] text-sm transition-colors">About</a></li>
             </ul>
           </div>
 
@@ -38,8 +38,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="/privacy" className="text-gray-300 hover:text-[#F59E0B] text-sm transition-colors">Privacy Policy</a></li>
-              <li><a href="/terms" className="text-gray-300 hover:text-[#F59E0B] text-sm transition-colors">Terms & Conditions</a></li>
+              <li><a href="/privacy" className="text-gray-300 hover:text-[#14B8A6] text-sm transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" className="text-gray-300 hover:text-[#14B8A6] text-sm transition-colors">Terms & Conditions</a></li>
             </ul>
           </div>
 
@@ -87,16 +87,16 @@ export default function Footer() {
 
             {/* Disclaimer */}
             <p className="text-gray-300 text-xs leading-relaxed">
-              Practice responsible gaming always. Gaming may prove addictive. Assistance needs should prompt contact with GamCare or BeGambleAware.
+              Gamble responsibly at all times. Gaming addiction is real. If you need help, please contact GamCare or BeGambleAware immediately.
             </p>
           </div>
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-[#7C3AED]/30 py-6">
+        <div className="border-t border-[#0D9488]/30 py-6">
           <div className="text-center text-gray-400 text-sm">
             <p>&copy; 2025 {siteConfig.name}. All rights reserved.</p>
-            <p className="mt-1">Gaming carries addiction risks. Exercise responsible play.</p>
+            <p className="mt-1">Gambling is addictive. Always play responsibly.</p>
           </div>
         </div>
       </div>

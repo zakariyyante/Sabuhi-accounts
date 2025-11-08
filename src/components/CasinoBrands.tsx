@@ -9,6 +9,7 @@ import { track } from '@vercel/analytics';
 export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     // Get tracking value - checks URL first, then sessionStorage
@@ -29,6 +30,7 @@ export default function CasinoBrands() {
     
     // Check on mount
     checkIsDesktop();
+    setIsMounted(true);
     
     // Add event listener for window resize
     window.addEventListener('resize', checkIsDesktop);
@@ -91,20 +93,24 @@ export default function CasinoBrands() {
     return null;
   };
 
-  // Filter casinos based on device for A/B testing
-  // Desktop: Only show GrandIvy and DreamVegas
-  // Mobile: Show all casinos
-  const desktopCasinos = ['GrandIvy', 'DreamVegas'];
+  // Filter casinos based on device
+  // Desktop: Show only the last casino (GrandIvy)
+  // Mobile: Show all casinos except the last one
   const filteredCasinos = isDesktop 
-    ? siteConfig.casinos.filter(casino => desktopCasinos.includes(casino.name))
-    : siteConfig.casinos;
+    ? siteConfig.casinos.slice(-1)
+    : siteConfig.casinos.slice(0, -1);
+
+  // Don't render until we know the device type to prevent flash
+  if (!isMounted) {
+    return null;
+  }
 
   return (
-    <section id="casinos" className="py-6 md:py-10 bg-gradient-to-br from-[#1a1625] via-[#2d1b4e] to-[#1f1f2e] relative overflow-hidden">
+    <section id="casinos" className="py-6 md:py-10 bg-gradient-to-br from-[#0a1f1c] via-[#1e3a38] to-[#0f1419] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#7C3AED] rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F59E0B] rounded-full filter blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#0D9488] rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F97316] rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="relative max-w-6xl mx-auto px-3 md:px-4">
@@ -128,11 +134,11 @@ export default function CasinoBrands() {
                 )}
 
                 {/* Casino Card */}
-                <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-purple-400/30">
+                <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-teal-400/30">
                   <div className="flex flex-row min-h-[200px] md:min-h-[280px]">
-                    {/* Left Section - Purple/Amber Gradient with Angled Edge */}
+                    {/* Left Section - Teal/Coral Gradient with Angled Edge */}
                     <div 
-                      className="relative bg-gradient-to-br from-[#7C3AED] via-[#8B5CF6] to-[#F59E0B] p-4 md:p-8 flex flex-col justify-between w-[40%] md:w-[40%]"
+                      className="relative bg-gradient-to-br from-[#0D9488] via-[#14B8A6] to-[#F97316] p-4 md:p-8 flex flex-col justify-between w-[40%] md:w-[40%]"
                       style={{
                         clipPath: 'polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%)'
                       }}
@@ -177,21 +183,21 @@ export default function CasinoBrands() {
                       </div>
                     </div>
 
-                    {/* Right Section - Dark Purple/Blue */}
-                    <div className="relative bg-gradient-to-br from-[#2d1b4e] to-[#1f2937] p-4 md:p-8 flex flex-col justify-center w-[60%] md:w-[60%]">
+                    {/* Right Section - Dark Slate */}
+                    <div className="relative bg-gradient-to-br from-[#1e3a38] to-[#1e293b] p-4 md:p-8 flex flex-col justify-center w-[60%] md:w-[60%]">
                       {/* Bonus Offer Text - Centered */}
                       <div className="text-center flex-1 flex flex-col justify-center mb-3 md:mb-4">
                         <div className="text-white text-xl md:text-4xl font-bold mb-1 md:mb-3 leading-tight">
                           {casino.bonus.split('\n')[0] || casino.bonus}
                         </div>
                         {casino.bonus.includes('\n') && (
-                          <div className="text-[#FBBF24] text-lg md:text-3xl font-bold leading-tight">
+                          <div className="text-[#14B8A6] text-lg md:text-3xl font-bold leading-tight">
                             {casino.bonus.split('\n')[1]}
                           </div>
                         )}
                       </div>
 
-                      {/* GET BONUS Button - Elegant Amber */}
+                      {/* GET BONUS Button - Vibrant Coral */}
                       <div>
                         <a
                           href={processPlayLink(casino.playLink)}
@@ -205,9 +211,9 @@ export default function CasinoBrands() {
                               button_type: 'get_bonus'
                             });
                           }}
-                          className="block w-full bg-gradient-to-r from-[#F59E0B] via-[#FBBF24] to-[#F59E0B] text-gray-900 font-bold py-2.5 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl text-center text-sm md:text-lg hover:from-[#D97706] hover:via-[#F59E0B] hover:to-[#D97706] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 border border-[#D97706]"
+                          className="block w-full bg-gradient-to-r from-[#F97316] via-[#FB923C] to-[#F97316] text-white font-bold py-2.5 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl text-center text-sm md:text-lg hover:from-[#EA580C] hover:via-[#F97316] hover:to-[#EA580C] transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 border border-[#EA580C]"
                         >
-                          GET BONUS
+                          CLAIM BONUS
                         </a>
                       </div>
                     </div>

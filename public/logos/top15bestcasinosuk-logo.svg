@@ -1,0 +1,41 @@
+<svg width="280" height="60" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Badge with 15 -->
+  <g transform="translate(5, 10)">
+    <circle cx="20" cy="20" r="18" fill="url(#badgeGradient)" stroke="#14B8A6" stroke-width="2"/>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">15</text>
+  </g>
+  
+  <!-- Trophy Icon -->
+  <g transform="translate(8, 8)">
+    <path d="M16 6h2v4h-2zM26 6h2v4h-2z" fill="#F97316"/>
+    <path d="M14 10h16v6c0 4-3 7-8 7s-8-3-8-7v-6z" fill="url(#trophyGradient)"/>
+    <path d="M20 23v4M18 27h4" stroke="#14B8A6" stroke-width="2" stroke-linecap="round"/>
+    <rect x="16" y="27" width="8" height="3" rx="1" fill="#F97316"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="55" y="24" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#14B8A6">
+    TOP 15
+  </text>
+  <text x="55" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#F8FAFC">
+    BEST CASINOS UK
+  </text>
+  
+  <!-- Decorative Stars -->
+  <path d="M 200 18 l 2 6 l 6 0 l -5 4 l 2 6 l -5 -4 l -5 4 l 2 -6 l -5 -4 l 6 0 z" fill="#F97316" opacity="0.6"/>
+  <path d="M 220 25 l 1.5 4.5 l 4.5 0 l -3.5 3 l 1.5 4.5 l -3.5 -3 l -3.5 3 l 1.5 -4.5 l -3.5 -3 l 4.5 0 z" fill="#14B8A6" opacity="0.5"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="trophyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="50%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#FDBA74"/>
+    </linearGradient>
+  </defs>
+</svg>
+

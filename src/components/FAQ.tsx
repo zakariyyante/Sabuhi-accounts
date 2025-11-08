@@ -7,28 +7,28 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Do all listed casinos hold UK licenses?",
-      answer: "Absolutely. Every casino on our platform possesses complete UK Gambling Commission authorization. This ensures compliance with strict UK regulations regarding player protection, fair play standards, and responsible gaming measures for British users."
+      question: "How do you select your top 15 casinos?",
+      answer: "Our selection process evaluates UK Gambling Commission licensed operators across multiple factors: licensing compliance, game variety, promotional value, customer service excellence, payment options, and overall player satisfaction. Only the highest-performing casinos earn a spot in our top 15."
     },
     {
-      question: "Are you exclusively focused on UK-authorized casinos?",
-      answer: "Yes, entirely. Our listings contain only UK Gambling Commission approved operators. We evaluate platforms across various criteria including regulatory compliance, gaming variety, bonus terms, customer support quality, banking methods, and player satisfaction. Only premium UK-authorized casinos make our selection."
+      question: "Are all featured casinos UK-licensed?",
+      answer: "Yes, absolutely. Each casino in our top 15 holds full UK Gambling Commission licensing, ensuring adherence to stringent UK standards for player safety, fair gaming, and responsible gambling practices."
     },
     {
-      question: "How accurate are the displayed bonus promotions?",
-      answer: "We perform regular reviews of promotional information, though offers may change. We recommend checking each casino's official site for current bonus details and wagering terms before signing up."
+      question: "How frequently do you update your rankings?",
+      answer: "We continuously monitor and update our rankings based on performance metrics, player feedback, and regulatory compliance. Our team reviews each casino monthly to ensure accuracy and relevance."
     },
     {
-      question: "Are these UK-authorized casinos safe?",
-      answer: "Definitely. Every featured platform holds UK Gambling Commission authorization, uses SSL encryption for secure transactions, and follows strict UK responsible gaming requirements."
+      question: "Can I trust the bonus offers displayed?",
+      answer: "We verify all promotional offers regularly, but terms can change. Always check the casino's official website for the latest bonus details, terms and conditions, and wagering requirements before registering."
     },
     {
-      question: "Is there a fee for using your comparison platform?",
-      answer: "No, our platform is completely free. Though we may receive affiliate commissions when you join through our referrals, this doesn't affect our assessments or your access to promotions."
+      question: "Is your comparison service free to use?",
+      answer: "Yes, completely free. While we earn affiliate commissions from some casinos when you register through our links, this never influences our rankings or the offers available to you."
     },
     {
-      question: "What if I experience problems with a casino?",
-      answer: "First, contact the casino's support team directly. If the issue persists, you can escalate to appropriate gambling regulators or use their Alternative Dispute Resolution services."
+      question: "What should I do if I have issues with a casino?",
+      answer: "Contact the casino's customer support immediately. If unresolved, you can escalate complaints to the UK Gambling Commission or use the casino's Alternative Dispute Resolution provider."
     }
   ];
 
@@ -37,32 +37,32 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 bg-[#111827] border-y border-[#7C3AED]/20">
+    <section className="py-16 bg-[#0F172A] border-y border-[#0D9488]/20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-white to-[#F59E0B] bg-clip-text text-transparent">
-              Common Questions
+            <span className="bg-gradient-to-r from-white to-[#14B8A6] bg-clip-text text-transparent">
+              Your Questions Answered
             </span>
           </h2>
           <p className="text-gray-300 text-lg">
-            Key details about our casino selection process
+            Everything you need to know about our top 15 casino rankings
           </p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-[#1F2937] border border-[#7C3AED]/30 rounded-xl overflow-hidden hover:border-[#F59E0B]/50 transition-all">
+            <div key={index} className="bg-[#1E293B] border border-[#0D9488]/30 rounded-xl overflow-hidden hover:border-[#14B8A6]/50 transition-all">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-[#2D1B4E]/50 transition-colors"
+                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-[#0D9488]/10 transition-colors"
               >
                 <h3 className="text-white font-semibold text-lg pr-4">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0">
                   <svg
-                    className={`w-5 h-5 text-[#F59E0B] transition-transform duration-200 ${
+                    className={`w-5 h-5 text-[#14B8A6] transition-transform duration-200 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -79,7 +79,7 @@ export default function FAQ() {
                 </div>
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-5 border-t border-[#7C3AED]/20">
+                <div className="px-6 pb-5 border-t border-[#0D9488]/20">
                   <p className="text-gray-300 leading-relaxed pt-4">
                     {faq.answer}
                   </p>

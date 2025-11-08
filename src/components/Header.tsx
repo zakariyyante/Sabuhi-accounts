@@ -16,14 +16,14 @@ export default function Header() {
     setIsMenuOpen(false);
   };
   return (
-    <header className="bg-gradient-to-r from-[#1F2937] to-[#111827] border-b border-[#7C3AED]/30 shadow-lg sticky top-0 z-50">
+    <header className="bg-gradient-to-r from-[#1E293B] to-[#0F172A] border-b border-[#0D9488]/30 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="relative w-48 h-12">
+            <div className="relative w-64 h-12">
               <Image
-                src="/logos/ukcasinokings-logo.svg"
+                src="/logos/top15bestcasinosuk-logo.svg"
                 alt={siteConfig.name}
                 fill
                 className="object-contain group-hover:opacity-90 transition-opacity"
@@ -33,19 +33,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-[#F59E0B] transition-all duration-300 hover:scale-105 font-medium">
+            <Link href="/" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
               Home
             </Link>
-            <Link href="/about" className="text-gray-300 hover:text-[#F59E0B] transition-all duration-300 hover:scale-105 font-medium">
+            <Link href="/about" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
               About
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-[#F59E0B] transition-all duration-300 hover:scale-105 font-medium">
+            <Link href="/contact" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
               Contact
             </Link>
-            <Link href="/privacy" className="text-gray-300 hover:text-[#F59E0B] transition-all duration-300 hover:scale-105 font-medium">
+            <Link href="/privacy" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
               Privacy
             </Link>
-            <Link href="/terms" className="text-gray-300 hover:text-[#F59E0B] transition-all duration-300 hover:scale-105 font-medium">
+            <Link href="/terms" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
               Terms
             </Link>
           </nav>
@@ -53,14 +53,14 @@ export default function Header() {
           {/* 18+ Badge and Mobile Menu Button */}
           <div className="flex items-center gap-3">
             {/* 18+ Badge */}
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#8B5CF6] border-2 border-[#A78BFA] shadow-lg">
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#0D9488] to-[#14B8A6] border-2 border-[#2DD4BF] shadow-lg">
               <span className="text-white font-bold text-sm">18+</span>
             </div>
             
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="md:hidden p-2 rounded-lg text-gray-300 hover:text-[#F59E0B] hover:bg-[#7C3AED]/20 transition-colors"
+              className="md:hidden p-2 rounded-lg text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 transition-colors"
               aria-label="Toggle menu"
             >
               <svg
@@ -92,39 +92,39 @@ export default function Header() {
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#1F2937] border-t border-[#7C3AED]/30">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#1E293B] border-t border-[#0D9488]/30">
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#F59E0B] hover:bg-[#7C3AED]/20 rounded-lg transition-colors"
+                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
               >
                 Home
               </Link>
               <Link
                 href="/about"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#F59E0B] hover:bg-[#7C3AED]/20 rounded-lg transition-colors"
+                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
               >
                 About
               </Link>
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#F59E0B] hover:bg-[#7C3AED]/20 rounded-lg transition-colors"
+                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
               >
                 Contact
               </Link>
               <Link
                 href="/privacy"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#F59E0B] hover:bg-[#7C3AED]/20 rounded-lg transition-colors"
+                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#F59E0B] hover:bg-[#7C3AED]/20 rounded-lg transition-colors"
+                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
               >
                 Terms & Conditions
               </Link>

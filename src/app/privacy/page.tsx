@@ -4,7 +4,7 @@ import { siteConfig } from '@/config/site';
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-[#111827]">
+    <div className="min-h-screen bg-[#0F172A]">
       <Header />
       
       <main className="py-16">

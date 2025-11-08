@@ -4,103 +4,103 @@ import { siteConfig } from '@/config/site';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#111827]">
+    <div className="min-h-screen bg-[#0F172A]">
       <Header />
       
       <main className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-[#7C3AED] to-[#F59E0B] bg-clip-text text-transparent">About UK Casino Kings</span>
+                  <span className="bg-gradient-to-r from-[#0D9488] to-[#F97316] bg-clip-text text-transparent">About Top 15 Best Casinos UK</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Your premier destination showcasing only UK Gambling Commission authorized online casinos with verified promotions and protected gaming for UK players.
+              Your ultimate resource for discovering the finest UK Gambling Commission licensed casinos with exclusive deals and secure gaming experiences.
             </p>
           </div>
 
           <div className="prose prose-invert max-w-none">
-            <div className="bg-[#1F2937] border border-[#7C3AED]/30 rounded-xl p-8 mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Identity</h2>
+            <div className="bg-[#1E293B] border border-[#0D9488]/30 rounded-xl p-8 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4">Who We Are</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                UK Casino Kings operates as an independent platform devoted exclusively to showcasing UK Gambling Commission authorized casinos. 
-                With no ownership connections to gambling operators, our evaluations stay thoroughly impartial and prioritize UK player interests.
+                Top 15 Best Casinos UK is an independent comparison website specializing in UK Gambling Commission licensed online casinos. 
+                With zero affiliations to casino owners, our reviews remain purely objective, focusing entirely on UK player needs.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Our roster includes seasoned gambling sector experts familiar with UK market dynamics, 
-                UK Gambling Commission standards, and UK player expectations. Each UK-authorized casino undergoes complete testing, 
-                covering account creation, deposits, gaming sessions, and withdrawal procedures.
+                Our team comprises industry veterans with deep knowledge of the UK gaming market, 
+                regulatory frameworks, and player preferences. Every casino undergoes thorough evaluation, 
+                from sign-up processes and deposit methods to gameplay and cashout speeds.
               </p>
             </div>
 
-            <div className="bg-[#1F2937] rounded-xl p-8 mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Purpose</h2>
+            <div className="bg-[#1E293B] rounded-xl p-8 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Our purpose is straightforward: delivering UK players reliable, current details about premier 
-                online casinos accessible to them. Gaming should remain enjoyable, secure, and equitable, which explains 
-                why our recommendations meet rigorous standards for authorization, safety, and player welfare.
+                We aim to simplify casino selection for UK players by highlighting the top 15 licensed operators. 
+                Gambling should be entertaining, protected, and fair - that's why every casino meets our 
+                demanding criteria for licensing, security, and player care.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                We advocate responsible gaming practices and verify that recommended casinos 
-                offer proper resources and assistance for players requiring support with their gaming habits.
+                We promote safe gambling and ensure all featured casinos 
+                provide adequate tools and support for responsible gaming behavior.
               </p>
             </div>
 
-            <div className="bg-[#1F2937] rounded-xl p-8 mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Selection Criteria</h2>
+            <div className="bg-[#1E293B] rounded-xl p-8 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4">How We Rank Casinos</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Each casino featured undergoes thorough analysis. Our evaluation encompasses numerous elements such as:
+                Every casino undergoes rigorous testing. We evaluate critical factors including:
               </p>
               <ul className="text-gray-300 space-y-2 mb-4">
                 <li className="flex items-start">
-                  <span className="text-[#F59E0B] mr-2">•</span>
-                  <span>UK Gambling Commission authorization and adherence</span>
+                  <span className="text-[#14B8A6] mr-2">•</span>
+                  <span>UK Gambling Commission licensing and regulatory compliance</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#F59E0B] mr-2">•</span>
-                  <span>Gaming selection and software partners</span>
+                  <span className="text-[#14B8A6] mr-2">•</span>
+                  <span>Game library depth and software provider quality</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#F59E0B] mr-2">•</span>
-                  <span>Promotional packages and playthrough conditions</span>
+                  <span className="text-[#14B8A6] mr-2">•</span>
+                  <span>Bonus value and wagering requirement fairness</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#F59E0B] mr-2">•</span>
-                  <span>Payment methods and cashout timeframes</span>
+                  <span className="text-[#14B8A6] mr-2">•</span>
+                  <span>Banking variety and withdrawal processing speed</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#F59E0B] mr-2">•</span>
-                  <span>Support team effectiveness and accessibility</span>
+                  <span className="text-[#14B8A6] mr-2">•</span>
+                  <span>Customer service responsiveness and availability</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#F59E0B] mr-2">•</span>
-                  <span>Mobile optimization and interface quality</span>
+                  <span className="text-[#14B8A6] mr-2">•</span>
+                  <span>Mobile platform performance and usability</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#F59E0B] mr-2">•</span>
-                  <span>Responsible gaming features and assistance</span>
+                  <span className="text-[#14B8A6] mr-2">•</span>
+                  <span>Responsible gambling tools and player protection</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-[#1F2937] rounded-xl p-8 mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Pledge</h2>
+            <div className="bg-[#1E293B] rounded-xl p-8 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4">Our Promise</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                We commit to consistently delivering truthful, objective casino information. Every 
-                listed casino has passed comprehensive scrutiny and satisfies our elevated benchmarks 
-                for security, equity, and user contentment.
+                We guarantee honest, impartial casino reviews. Each featured operator 
+                undergoes thorough vetting and meets our strict standards 
+                for safety, fairness, and player satisfaction.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                We frequently refresh our content for accuracy and maintain full transparency regarding 
-                business partnerships with operators. Our chief objective involves empowering informed 
-                gaming destination choices.
+                We regularly update our rankings to maintain accuracy and remain transparent about 
+                any commercial relationships. Our primary goal is helping you make smart 
+                decisions about where to play.
               </p>
             </div>
 
-            <div className="bg-[#1F2937] rounded-xl p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">Get In Touch</h2>
+            <div className="bg-[#1E293B] rounded-xl p-8">
+              <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Questions regarding our selections or assistance locating your ideal casino? 
-                We're available to assist. Contact details:
+                Need help choosing the right casino or have questions about our rankings? 
+                We're here to help:
               </p>
               <div className="text-gray-300 space-y-2">
                 <p><strong>Email:</strong> {siteConfig.contact.email}</p>
