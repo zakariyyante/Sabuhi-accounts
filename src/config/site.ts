@@ -27,84 +27,70 @@ export const siteConfig = {
       name: "55bet",
       logo: "55bet.svg",
       bonus: "100% up to £300",
-      rating: 9.5,
+      rating: 9.8,
       playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3625&sub1=nsx3&sub2="
     },
     {
       name: "LuckyTwice",
-      logo: "LuckyTwice.svg",
+      logo: "luckytwice.webp",
       bonus: "100% Up to £500\n250 Free Spins",
-      rating: 9.4,
+      rating: 9.6,
       playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3137&sub1=nsx3&sub2="
     },
     {
       name: "Qbet",
-      logo: "QBet.svg",
+      logo: "qbet.png",
       bonus: "Bonus up to £100\n50 Free Spins",
-      rating: 9.3,
+      rating: 9.4,
       playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=2976&sub1=nsx3&sub2="
     },
     {
       name: "Monaco",
-      logo: "monaco.webp",
+      logo: "monacojack.png",
       bonus: "Up to €2,500\n275 Free Spins",
       rating: 9.2,
       playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3723&sub1=nsx3&sub2="
     },
     {
+      name: "Betzino",
+      logo: "betzino.png",
+      bonus: "200% Welcome Bonus\nUp to €200",
+      rating: 9.0,
+      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3487&sub1=nsx3&sub2="
+    },
+    {
       name: "FishAndSpins",
-      logo: "FishandSpins.png",
+      logo: "fish1.png",
       bonus: "100% up to £1000\n100 Free Spins",
-      rating: 9.1,
+      rating: 8.8,
       playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3537&sub1=nsx3&sub2="
     },
     {
       name: "HarryCasino",
-      logo: "HarryCasino.svg",
+      logo: "harry.png",
       bonus: "200% up to £2000\n200 Free Spins",
-      rating: 9.0,
+      rating: 8.6,
       playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3446&sub1=nsx3&sub2="
     },
     {
       name: "Dracula",
       logo: "Dracula.svg",
       bonus: "200% up to €500",
-      rating: 8.9,
+      rating: 8.4,
       playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3658&sub1=nsx3&sub2="
-    },
-    {
-      name: "LetsJackpot",
-      logo: "LetsJackpot.svg",
-      bonus: "100% up to €250",
-      rating: 8.8,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3488&sub1=nsx3&sub2="
-    },
-    {
-      name: "Kaasino",
-      logo: "Kaasino.svg",
-      bonus: "225% UP TO €2,500\n500 FS + 25% Cashback",
-      rating: 8.7,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3312&sub1=nsx3&sub2="
-    },
-    {
-      name: "Betzino",
-      logo: "betzino.png",
-      bonus: "200% Welcome Bonus\nUp to €200",
-      rating: 8.6,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3487&sub1=nsx3&sub2="
     },
     {
       name: "Amonbet",
       logo: "Amonbet.svg",
       bonus: "100% up to £1,000\n100 Free Spins",
-      rating: 8.5,
+      rating: 8.2,
       playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3527&sub1=nsx3&sub2="
     },
     {
       name: "GrandIvy",
       logo: "grandivy.webp",
       bonus: "Bet £20\nGet 100 Free Spins",
-      rating: 7.9,
+      rating: 8.0,
       playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
     }
   ],
