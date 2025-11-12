@@ -23,78 +23,78 @@ export const siteConfig = {
   
   // Casino brands data
   casinos: [
-    {
-      name: "55bet",
-      logo: "55bet.svg",
-      bonus: "100% up to £300",
-      rating: 9.8,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3625&sub1=nsx3&sub2=",
-      mobile:true,
-    },
-    {
-      name: "LuckyTwice",
-      logo: "luckytwice.webp",
-      bonus: "100% Up to £500\n250 Free Spins",
-      rating: 9.6,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3137&sub1=nsx3&sub2=",
-      mobile:true,
-    },
-    {
-      name: "Qbet",
-      logo: "qbet.png",
-      bonus: "Bonus up to £100\n50 Free Spins",
-      rating: 9.4,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=2976&sub1=nsx3&sub2=",
-      mobile:true,
-    },
-    {
-      name: "Monaco",
-      logo: "monacojack.png",
-      bonus: "Up to €2,500\n275 Free Spins",
-      rating: 9.2,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3723&sub1=nsx3&sub2=",
-      mobile:true,
-    },
-    {
-      name: "Betzino",
-      logo: "betzino.png",
-      bonus: "200% Welcome Bonus\nUp to €200",
-      rating: 9.0,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3487&sub1=nsx3&sub2=",
-      mobile:true,
-    },
-    {
-      name: "FishAndSpins",
-      logo: "fish1.png",
-      bonus: "100% up to £1000\n100 Free Spins",
-      rating: 8.8,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3537&sub1=nsx3&sub2=",
-      mobile:true,
-    },
-    {
-      name: "HarryCasino",
-      logo: "harry.png",
-      bonus: "200% up to £2000\n200 Free Spins",
-      rating: 8.6,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3446&sub1=nsx3&sub2=",
-      mobile:true,
-    },
-    {
-      name: "Dracula",
-      logo: "Dracula.svg",
-      bonus: "200% up to €500",
-      rating: 8.4,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3658&sub1=nsx3&sub2=",
-      mobile:true,
-    },
-    {
-      name: "Amonbet",
-      logo: "Amonbet.svg",
-      bonus: "100% up to £1,000\n100 Free Spins",
-      rating: 8.2,
-      playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3527&sub1=nsx3&sub2=",
-      mobile:true,
-    },
+    // {
+    //   name: "55bet",
+    //   logo: "55bet.svg",
+    //   bonus: "100% up to £300",
+    //   rating: 9.8,
+    //   playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3625&sub1=nsx3&sub2=",
+    //   mobile:true,
+    // },
+    // {
+    //   name: "LuckyTwice",
+    //   logo: "luckytwice.webp",
+    //   bonus: "100% Up to £500\n250 Free Spins",
+    //   rating: 9.6,
+    //   playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3137&sub1=nsx3&sub2=",
+    //   mobile:true,
+    // },
+    // {
+    //   name: "Qbet",
+    //   logo: "qbet.png",
+    //   bonus: "Bonus up to £100\n50 Free Spins",
+    //   rating: 9.4,
+    //   playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=2976&sub1=nsx3&sub2=",
+    //   mobile:true,
+    // },
+    // {
+    //   name: "Monaco",
+    //   logo: "monacojack.png",
+    //   bonus: "Up to €2,500\n275 Free Spins",
+    //   rating: 9.2,
+    //   playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3723&sub1=nsx3&sub2=",
+    //   mobile:true,
+    // },
+    // {
+    //   name: "Betzino",
+    //   logo: "betzino.png",
+    //   bonus: "200% Welcome Bonus\nUp to €200",
+    //   rating: 9.0,
+    //   playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3487&sub1=nsx3&sub2=",
+    //   mobile:true,
+    // },
+    // {
+    //   name: "FishAndSpins",
+    //   logo: "fish1.png",
+    //   bonus: "100% up to £1000\n100 Free Spins",
+    //   rating: 8.8,
+    //   playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3537&sub1=nsx3&sub2=",
+    //   mobile:true,
+    // },
+    // {
+    //   name: "HarryCasino",
+    //   logo: "harry.png",
+    //   bonus: "200% up to £2000\n200 Free Spins",
+    //   rating: 8.6,
+    //   playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3446&sub1=nsx3&sub2=",
+    //   mobile:true,
+    // },
+    // {
+    //   name: "Dracula",
+    //   logo: "Dracula.svg",
+    //   bonus: "200% up to €500",
+    //   rating: 8.4,
+    //   playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3658&sub1=nsx3&sub2=",
+    //   mobile:true,
+    // },
+    // {
+    //   name: "Amonbet",
+    //   logo: "Amonbet.svg",
+    //   bonus: "100% up to £1,000\n100 Free Spins",
+    //   rating: 8.2,
+    //   playLink: "https://affiliates.museoita.com/click?pid=183&offer_id=3527&sub1=nsx3&sub2=",
+    //   mobile:true,
+    // },
     {
       name: "GrandIvy",
       logo: "grandivy.webp",
@@ -153,7 +153,7 @@ export const getFilteredCasinos = () => {
   
   // If on mobile AND has gclid AND referrer contains google, show only mobile:true brands
   if (isMobile && hasGclid && isFromGoogle) {
-    return siteConfig.casinos.filter(casino => casino.mobile === true);
+    return siteConfig.casinos.filter(casino => 'mobile' in casino && casino.mobile === true);
   }
   
   // Otherwise return all casinos
