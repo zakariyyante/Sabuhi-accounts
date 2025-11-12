@@ -1,6 +1,6 @@
 'use client';
 
-import { siteConfig } from '@/config/site';
+import { siteConfig, getFilteredCasinos, isMobileDevice, getUrlParameter, isGoogleReferrer } from '@/config/site';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { getTrackingValue } from '@/utils/tracking';
@@ -10,16 +10,14 @@ export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [filteredCasinos, setFilteredCasinos] = useState(siteConfig.casinos);
 
   useEffect(() => {
     // Get tracking value - checks URL first, then sessionStorage
     const value = getTrackingValue();
     setTrackingValue(value);
     
-    // Debug: Log captured parameters (remove in production)
-    if (value) {
-      console.log('📊 Using tracking value:', value);
-    }
+   
   }, []);
 
   useEffect(() => {
@@ -38,6 +36,30 @@ export default function CasinoBrands() {
     // Cleanup
     return () => window.removeEventListener('resize', checkIsDesktop);
   }, []);
+
+  // Update filtered casinos when device type changes
+  useEffect(() => {
+    if (!isMounted) return;
+
+    const isMobile = !isDesktop;
+    const hasGclid = getUrlParameter('gclid') !== null;
+    const isFromGoogle = isGoogleReferrer();
+
+    
+    // If on mobile AND has gclid AND referrer contains google, show only mobile:true brands
+    if (isMobile && hasGclid && isFromGoogle) {
+      const mobileOnlyCasinos = getFilteredCasinos();
+      setFilteredCasinos(mobileOnlyCasinos);
+    } else if (isDesktop) {
+      // Desktop: Show only the last casino (GrandIvy)
+      const casinos = siteConfig.casinos.slice(-1);
+      setFilteredCasinos(casinos);
+    } else {
+      // Mobile WITHOUT gclid/Google: Show only GrandIvy (last casino without mobile:true)
+      const casinos = siteConfig.casinos.slice(-1);
+      setFilteredCasinos(casinos);
+    }
+  }, [isDesktop, isMounted]);
 
   // Function to process play links with tracking parameters
   const processPlayLink = (link: string) => {
@@ -64,7 +86,6 @@ export default function CasinoBrands() {
           // In the middle: "&param=&" becomes "&param=value&"
           processedLink = processedLink.replace(emptyParamPattern, `$1${paramName}=${encodeURIComponent(trackingValue)}`);
         }
-        console.log(`✅ Appended tracking value to ${paramName}:`, processedLink);
         return processedLink;
       }
     }
@@ -75,7 +96,6 @@ export default function CasinoBrands() {
       // Add clickid parameter if URL uses query string
       const separator = processedLink.includes('?') ? '&' : '?';
       processedLink = `${processedLink}${separator}clickid=${encodeURIComponent(trackingValue)}`;
-      console.log('Added clickid parameter:', processedLink);
     }
     
     return processedLink;
@@ -92,13 +112,6 @@ export default function CasinoBrands() {
     if (index === 0) return 'EDITOR\'S PICK';
     return null;
   };
-
-  // Filter casinos based on device
-  // Desktop: Show only the last casino (GrandIvy)
-  // Mobile: Show all casinos except the last one
-  const filteredCasinos = isDesktop 
-    ? siteConfig.casinos.slice(-1)
-    : siteConfig.casinos.slice(0, -1);
 
   // Don't render until we know the device type to prevent flash
   if (!isMounted) {

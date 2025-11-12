@@ -28,7 +28,6 @@ export function captureTrackingFromURL(): string {
   if (capturedValue) {
     try {
       sessionStorage.setItem(TRACKING_STORAGE_KEY, capturedValue);
-      console.log('📌 Stored tracking value:', capturedValue);
     } catch (e) {
       console.warn('Failed to store tracking value:', e);
     }
