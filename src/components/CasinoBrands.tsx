@@ -10,7 +10,7 @@ export default function CasinoBrands() {
   const [trackingValue, setTrackingValue] = useState('');
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [filteredCasinos, setFilteredCasinos] = useState(siteConfig.casinos);
+  const [filteredCasinos, setFilteredCasinos] = useState<typeof siteConfig.casinos>([]);
 
   useEffect(() => {
     // Get tracking value - checks URL first, then sessionStorage
@@ -113,8 +113,8 @@ export default function CasinoBrands() {
     return null;
   };
 
-  // Don't render until we know the device type to prevent flash
-  if (!isMounted) {
+  // Don't render until we know the device type and have filtered casinos to prevent flash
+  if (!isMounted || filteredCasinos.length === 0) {
     return null;
   }
 
