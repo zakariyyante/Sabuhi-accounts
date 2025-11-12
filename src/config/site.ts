@@ -101,13 +101,6 @@ export const siteConfig = {
       bonus: "Bet £20\nGet 100 Free Spins",
       rating: 8.0,
       playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
-    },
-    {
-      name: "GrandIvy",
-      logo: "grandivy.webp",
-      bonus: "Bet £20\nGet 100 Free Spins",
-      rating: 8.0,
-      playLink: "https://media1.casimbaaff.com/redirect.aspx?pid=16629&lpid=224&bid=1633&subid=GrandIvy-CXUK01&clickid="
     }
   ],
 
