@@ -44,12 +44,20 @@ export default function CasinoBrands() {
     const isMobile = !isDesktop;
     const hasGclid = getUrlParameter('gclid') !== null;
     const isFromGoogle = isGoogleReferrer();
-
+ 
     
     // If on mobile AND has gclid AND referrer contains google, show only mobile:true brands
     if (isMobile && hasGclid && isFromGoogle) {
       const mobileOnlyCasinos = getFilteredCasinos();
-      setFilteredCasinos(mobileOnlyCasinos);
+      
+      // Reassign ratings based on position to ensure decreasing order
+      // Start at 10 and decrease by 0.1 for each position
+      const casinosWithRankings = mobileOnlyCasinos.map((casino, index) => ({
+        ...casino,
+        rating: 10 - (index * 0.1)
+      }));
+      
+      setFilteredCasinos(casinosWithRankings);
     } else if (isDesktop) {
       // Desktop: Show only the last casino (GrandIvy)
       const casinos = siteConfig.casinos.slice(-1);
