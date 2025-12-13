@@ -1,24 +1,27 @@
 export const siteConfig = {
   // Basic site information
   name: "Top 15 Best Casinos UK",
-  description: "Discover the top 15 UK licensed casinos with exclusive offers and lightning-fast payouts",
+  description: "Discover the UK's most trusted online casinos. Expert reviews, exclusive bonuses, and instant withdrawals.",
   url: "https://top15bestcasinosuk.com",
   
-  // Brand colors - fresh teal & coral design
+  // Brand colors - Premium dark theme with gold accents
   colors: {
-    primary: "#0D9488",    // Teal - trustworthy & modern
-    secondary: "#1E293B",  // Slate Gray - sleek dark
-    accent: "#F97316",     // Coral Orange - vibrant & energetic
-    background: "#0F172A", // Deep slate background
-    surface: "#1E293B",    // Slate surface
-    text: "#F8FAFC",       // Crisp white text
-    textSecondary: "#CBD5E1", // Cool gray
+    primary: "#FFD700",    // Gold - premium & luxury
+    secondary: "#8B5CF6",  // Purple - modern & vibrant
+    accent: "#10B981",     // Emerald - success & trust
+    background: "#0A0A0F", // Deep dark background
+    surface: "#1A1A24",    // Dark surface
+    surfaceLight: "#242433", // Lighter surface
+    text: "#FFFFFF",       // Pure white text
+    textSecondary: "#A1A1AA", // Gray text
+    border: "#2D2D3D",     // Subtle borders
   },
   
   // Hero section content
   hero: {
-    headline: "Top 15 UK Licensed Online Casinos",
-    subtext: "Explore our handpicked selection of UK Gambling Commission regulated online casinos offering verified promotions, secure payment systems, and dedicated 24/7 assistance. Each operator holds valid UK licensing.",
+    headline: "UK's Most Trusted Casino Aggregator",
+    subheadline: "Compare. Choose. Win.",
+    subtext: "Expert-curated online casinos with verified bonuses, instant payouts, and full UK Gambling Commission licensing. Your path to premium gaming starts here.",
   },
   
   // Casino brands data

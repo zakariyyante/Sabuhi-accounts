@@ -15,37 +15,53 @@ export default function Header() {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
   return (
-    <header className="bg-gradient-to-r from-[#1E293B] to-[#0F172A] border-b border-[#0D9488]/30 shadow-lg sticky top-0 z-50">
+    <header className="bg-[#0A0A0F]/95 backdrop-blur-md border-b border-[#2D2D3D] sticky top-0 z-50 shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="relative w-64 h-12">
+            <div className="relative w-56 h-12">
               <Image
                 src="/logos/top15bestcasinosuk-logo.svg"
                 alt={siteConfig.name}
                 fill
-                className="object-contain group-hover:opacity-90 transition-opacity"
+                className="object-contain group-hover:opacity-80 transition-opacity"
               />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
+          <nav className="hidden md:flex items-center space-x-1">
+            <Link 
+              href="/" 
+              className="px-4 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-semibold hover:bg-[#1A1A24] rounded-lg"
+            >
               Home
             </Link>
-            <Link href="/about" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
+            <Link 
+              href="/about" 
+              className="px-4 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-semibold hover:bg-[#1A1A24] rounded-lg"
+            >
               About
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
+            <Link 
+              href="/contact" 
+              className="px-4 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-semibold hover:bg-[#1A1A24] rounded-lg"
+            >
               Contact
             </Link>
-            <Link href="/privacy" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
+            <Link 
+              href="/privacy" 
+              className="px-4 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-semibold hover:bg-[#1A1A24] rounded-lg"
+            >
               Privacy
             </Link>
-            <Link href="/terms" className="text-gray-300 hover:text-[#14B8A6] transition-all duration-300 hover:scale-105 font-medium">
+            <Link 
+              href="/terms" 
+              className="px-4 py-2 text-white hover:text-[#FFD700] transition-all duration-300 font-semibold hover:bg-[#1A1A24] rounded-lg"
+            >
               Terms
             </Link>
           </nav>
@@ -53,14 +69,14 @@ export default function Header() {
           {/* 18+ Badge and Mobile Menu Button */}
           <div className="flex items-center gap-3">
             {/* 18+ Badge */}
-            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#0D9488] to-[#14B8A6] border-2 border-[#2DD4BF] shadow-lg">
-              <span className="text-white font-bold text-sm">18+</span>
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-[#FFD700] to-[#FFC700] border-2 border-[#FFD700]/50 shadow-lg shadow-[#FFD700]/30">
+              <span className="text-black font-black text-sm">18+</span>
             </div>
             
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="md:hidden p-2 rounded-lg text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 transition-colors"
+              className="md:hidden p-2 rounded-lg text-white hover:text-[#FFD700] hover:bg-[#1A1A24] transition-colors"
               aria-label="Toggle menu"
             >
               <svg
@@ -92,39 +108,39 @@ export default function Header() {
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#1E293B] border-t border-[#0D9488]/30">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#1A1A24] border-t border-[#2D2D3D] rounded-b-xl">
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
+                className="block px-4 py-3 text-white hover:text-[#FFD700] hover:bg-[#242433] rounded-lg transition-colors font-semibold"
               >
                 Home
               </Link>
               <Link
                 href="/about"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
+                className="block px-4 py-3 text-white hover:text-[#FFD700] hover:bg-[#242433] rounded-lg transition-colors font-semibold"
               >
                 About
               </Link>
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
+                className="block px-4 py-3 text-white hover:text-[#FFD700] hover:bg-[#242433] rounded-lg transition-colors font-semibold"
               >
                 Contact
               </Link>
               <Link
                 href="/privacy"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
+                className="block px-4 py-3 text-white hover:text-[#FFD700] hover:bg-[#242433] rounded-lg transition-colors font-semibold"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
                 onClick={closeMenu}
-                className="block px-3 py-2 text-gray-300 hover:text-[#14B8A6] hover:bg-[#0D9488]/20 rounded-lg transition-colors"
+                className="block px-4 py-3 text-white hover:text-[#FFD700] hover:bg-[#242433] rounded-lg transition-colors font-semibold"
               >
                 Terms & Conditions
               </Link>

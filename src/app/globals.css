@@ -3,13 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #0D9488;
-  --color-secondary: #1E293B;
-  --color-accent: #F97316;
-  --color-background: #0F172A;
-  --color-surface: #1E293B;
-  --color-text: #F8FAFC;
-  --color-text-secondary: #CBD5E1;
+  --color-primary: #FFD700;
+  --color-secondary: #8B5CF6;
+  --color-accent: #10B981;
+  --color-background: #0A0A0F;
+  --color-surface: #1A1A24;
+  --color-surface-light: #242433;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #A1A1AA;
+  --color-border: #2D2D3D;
 }
 
 * {
@@ -25,10 +27,11 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(135deg, var(--color-background) 0%, var(--color-secondary) 100%);
+  background: #0A0A0F;
   min-height: 100vh;
 }
 
@@ -37,50 +40,89 @@ a {
   text-decoration: none;
 }
 
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FFD700 0%, #FFC700 100%);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFC700 0%, #FFB700 100%);
+}
+
 /* Custom components */
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-bold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
   }
 
   .btn-primary {
-    @apply btn bg-gradient-to-r from-[#F97316] to-[#FB923C] text-white hover:from-[#EA580C] hover:to-[#F97316] focus:ring-[#F97316] shadow-lg hover:shadow-xl font-bold transform hover:scale-105 transition-all duration-200;
+    @apply btn bg-gradient-to-r from-[#FFD700] to-[#FFC700] text-black hover:shadow-2xl hover:shadow-[#FFD700]/50 focus:ring-[#FFD700] hover:scale-105;
   }
 
   .btn-secondary {
-    @apply btn bg-gradient-to-r from-[#0D9488] to-[#14B8A6] text-white hover:from-[#14B8A6] hover:to-[#2DD4BF] focus:ring-[#0D9488] shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200;
+    @apply btn bg-[#1A1A24] border-2 border-[#2D2D3D] text-white hover:border-[#8B5CF6] hover:shadow-xl;
   }
 
   .card {
-    @apply rounded-xl shadow-2xl overflow-hidden backdrop-blur-sm transition-all duration-300;
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
-    border: 1px solid rgba(13, 148, 136, 0.3);
+    @apply rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 bg-gradient-to-br from-[#1A1A24] to-[#242433] border border-[#2D2D3D];
   }
   
   .card:hover {
-    border-color: rgba(20, 184, 166, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(20, 184, 166, 0.1);
+    @apply border-[#FFD700]/50 shadow-[#FFD700]/20;
+    transform: translateY(-4px);
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-[#0D9488] via-[#F97316] to-[#14B8A6] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#FFD700] via-[#FFC700] to-[#FFD700] bg-clip-text text-transparent;
+  }
+
+  .gradient-text-purple {
+    @apply bg-gradient-to-r from-[#8B5CF6] via-[#7C3AED] to-[#8B5CF6] bg-clip-text text-transparent;
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, rgba(13, 148, 136, 0.15) 0%, rgba(15, 23, 42, 0.15) 50%, rgba(249, 115, 22, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(139, 92, 246, 0.05) 50%, rgba(16, 185, 129, 0.05) 100%);
   }
 
-  .neon-glow {
-    box-shadow: 0 0 20px rgba(13, 148, 136, 0.3), 0 0 40px rgba(13, 148, 136, 0.1);
+  .premium-glow {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2), 0 0 60px rgba(255, 215, 0, 0.1);
   }
 
-  .casino-grid {
-    @apply flex flex-col gap-6;
+  .purple-glow {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.2), 0 0 60px rgba(139, 92, 246, 0.1);
   }
-  
-  .casino-grid .card {
-    @apply flex flex-col md:flex-row w-full;
-    min-height: auto;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
   }
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
 }

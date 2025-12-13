@@ -1,73 +1,99 @@
 import { siteConfig } from '@/config/site';
 
 export default function Hero() {
-  // Get current date
   const currentDate = new Date().toLocaleDateString('en-GB', { 
     day: 'numeric', 
-    month: 'long' 
+    month: 'long',
+    year: 'numeric'
   });
 
   return (
-    <section id="home" className="relative py-4 md:py-6 bg-gradient-to-br from-[#0a1f1c] via-[#1e3a38] to-[#0f1419] border-b border-teal-400/20 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#0D9488]/30 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#F97316]/30 rounded-full blur-3xl animate-pulse-slow" style={{animationDelay: '1s'}}></div>
+    <section id="home" className="relative py-16 md:py-24 bg-[#0A0A0F] overflow-hidden">
+      {/* Premium animated background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-[#FFD700]/10 to-[#8B5CF6]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-[#8B5CF6]/10 to-[#10B981]/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Bar - Updated Date */}
-        <div className="flex items-center justify-center mb-3 text-xs">
-          <div className="flex items-center gap-2 text-gray-400">
-            <svg className="w-3 h-3 text-[#14B8A6]" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-            </svg>
-            <span className="font-semibold">VERIFIED {currentDate}</span>
+        {/* Updated badge */}
+        <div className="flex items-center justify-center mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1A1A24] border border-[#2D2D3D] backdrop-blur-sm">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-[#10B981] rounded-full animate-pulse"></div>
+              <span className="text-xs font-medium text-[#A1A1AA]">VERIFIED</span>
+              <span className="text-xs text-white font-semibold">{currentDate}</span>
+            </div>
           </div>
         </div>
 
-        {/* Main Headline */}
-        <div className="text-center mb-4">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#14B8A6] via-[#2DD4BF] to-[#14B8A6]">
+        {/* Hero headline */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 leading-tight">
+            <span className="block text-white mb-2">
               {siteConfig.hero.headline}
+            </span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFC700] to-[#FFD700]">
+              {siteConfig.hero.subheadline}
             </span>
           </h1>
           
-          {/* Optional Subtext - Hidden on Mobile */}
-          {siteConfig.hero.subtext && (
-            <p className="hidden md:block text-sm md:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed mb-4">
-              {siteConfig.hero.subtext}
-            </p>
-          )}
+          <p className="text-lg md:text-xl text-[#A1A1AA] max-w-3xl mx-auto leading-relaxed mb-10">
+            {siteConfig.hero.subtext}
+          </p>
 
-          {/* Trust Badges - Horizontally Scrollable */}
-          <div className={`w-full overflow-x-auto ${!siteConfig.hero.subtext ? 'mt-0' : ''}`}>
-            <div className="flex items-center justify-center md:justify-center gap-2 md:gap-3 min-w-max px-4">
-              {/* UK Licensed */}
-              <div className="bg-gradient-to-r from-[#14B8A6] to-[#2DD4BF] text-gray-900 font-bold text-xs md:text-sm px-3 md:px-4 py-2 rounded-full shadow-lg flex items-center gap-2 whitespace-nowrap">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <a 
+              href="#casinos" 
+              className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FFD700] to-[#FFC700] text-black font-bold rounded-xl hover:shadow-2xl hover:shadow-[#FFD700]/50 transition-all duration-300 hover:scale-105"
+            >
+              <span>View Top Casinos</span>
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a 
+              href="#why-choose-us" 
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#1A1A24] border-2 border-[#2D2D3D] text-white font-bold rounded-xl hover:border-[#8B5CF6] transition-all duration-300"
+            >
+              <span>Learn More</span>
+            </a>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-[#1A1A24]/50 border border-[#2D2D3D] backdrop-blur-sm">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#FFD700] to-[#FFC700] flex items-center justify-center mb-3">
+                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" />
                 </svg>
-                <span>FULLY LICENSED</span>
               </div>
+              <h3 className="text-white font-bold text-lg mb-1">UK Licensed</h3>
+              <p className="text-[#A1A1AA] text-sm text-center">UKGC Approved</p>
+            </div>
 
-              {/* Secured and Safe */}
-              <div className="bg-gradient-to-r from-[#14B8A6] to-[#2DD4BF] text-gray-900 font-bold text-xs md:text-sm px-3 md:px-4 py-2 rounded-full shadow-lg flex items-center gap-2 whitespace-nowrap">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-[#1A1A24]/50 border border-[#2D2D3D] backdrop-blur-sm">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#7C3AED] flex items-center justify-center mb-3">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>100% SECURE</span>
               </div>
+              <h3 className="text-white font-bold text-lg mb-1">Secure</h3>
+              <p className="text-[#A1A1AA] text-sm text-center">SSL Encrypted</p>
+            </div>
 
-              {/* Fast Withdrawals */}
-              <div className="bg-gradient-to-r from-[#14B8A6] to-[#2DD4BF] text-gray-900 font-bold text-xs md:text-sm px-3 md:px-4 py-2 rounded-full shadow-lg flex items-center gap-2 whitespace-nowrap">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-[#1A1A24]/50 border border-[#2D2D3D] backdrop-blur-sm">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#10B981] to-[#059669] flex items-center justify-center mb-3">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                 </svg>
-                <span>INSTANT PAYOUTS</span>
               </div>
+              <h3 className="text-white font-bold text-lg mb-1">Fast Payouts</h3>
+              <p className="text-[#A1A1AA] text-sm text-center">Instant Withdrawals</p>
             </div>
           </div>
         </div>
