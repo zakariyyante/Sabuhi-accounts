@@ -8,7 +8,7 @@ export default function Hero() {
   });
 
   return (
-    <section id="home" className="relative py-16 md:py-24 bg-[#0A0A0F] overflow-hidden">
+    <section id="home" className="relative py-6 md:py-24 bg-[#0A0A0F] overflow-hidden">
       {/* Premium animated background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-[#FFD700]/10 to-[#8B5CF6]/10 rounded-full blur-3xl animate-pulse"></div>
@@ -31,9 +31,9 @@ export default function Hero() {
         </div>
 
         {/* Hero headline */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 leading-tight">
-            <span className="block text-white mb-2">
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl font-black mb-3 md:mb-4 leading-tight">
+            <span className="block text-white mb-1 md:mb-2">
               {siteConfig.hero.headline}
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFC700] to-[#FFD700]">
@@ -41,12 +41,12 @@ export default function Hero() {
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-[#A1A1AA] max-w-3xl mx-auto leading-relaxed mb-10">
+          <p className="hidden md:block text-lg md:text-xl text-[#A1A1AA] max-w-3xl mx-auto leading-relaxed mb-10">
             {siteConfig.hero.subtext}
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          {/* CTA Buttons - Hidden on mobile */}
+          <div className="hidden md:flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a 
               href="#casinos" 
               className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#FFD700] to-[#FFC700] text-black font-bold rounded-xl hover:shadow-2xl hover:shadow-[#FFD700]/50 transition-all duration-300 hover:scale-105"
@@ -64,8 +64,8 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Trust indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+          {/* Trust indicators - Hidden on mobile */}
+          <div className="hidden md:grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
             <div className="flex flex-col items-center p-6 rounded-2xl bg-[#1A1A24]/50 border border-[#2D2D3D] backdrop-blur-sm">
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#FFD700] to-[#FFC700] flex items-center justify-center mb-3">
                 <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">

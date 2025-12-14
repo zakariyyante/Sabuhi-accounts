@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-[#0D9488] to-[#F97316] bg-clip-text text-transparent">About Top 15 Best Casinos UK</span>
+                  <span className="bg-gradient-to-r from-[#FFD700] to-[#FFC700] bg-clip-text text-transparent">About {siteConfig.name}</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Your ultimate resource for discovering the finest UK Gambling Commission licensed casinos with exclusive deals and secure gaming experiences.
@@ -22,7 +22,7 @@ export default function AboutPage() {
             <div className="bg-[#1E293B] border border-[#0D9488]/30 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">Who We Are</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Top 15 Best Casinos UK is an independent comparison website specializing in UK Gambling Commission licensed online casinos. 
+                {siteConfig.name} is an independent comparison website specializing in UK Gambling Commission licensed online casinos. 
                 With zero affiliations to casino owners, our reviews remain purely objective, focusing entirely on UK player needs.
               </p>
               <p className="text-gray-300 leading-relaxed">

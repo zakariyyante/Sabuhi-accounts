@@ -19,16 +19,20 @@ export default function Header() {
   return (
     <header className="bg-[#0A0A0F]/95 backdrop-blur-md border-b border-[#2D2D3D] sticky top-0 z-50 shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <div className="relative w-56 h-12">
+        <div className="flex items-center justify-between h-14 md:h-20">
+          {/* Logo + Domain Name */}
+          <Link href="/" className="flex items-center gap-2 md:gap-3 group">
+            <div className="relative w-8 h-8 md:w-10 md:h-10 flex-shrink-0">
               <Image
-                src="/logos/top15bestcasinosuk-logo.svg"
-                alt={siteConfig.name}
+                src="/logos/winningspins-logo.svg"
+                alt="Casino Chip"
                 fill
                 className="object-contain group-hover:opacity-80 transition-opacity"
               />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className="text-white font-black text-lg md:text-2xl">WinningSpins</span>
+              <span className="text-[#FFD700] font-bold text-xs md:text-sm">.uk</span>
             </div>
           </Link>
 
@@ -67,10 +71,10 @@ export default function Header() {
           </nav>
 
           {/* 18+ Badge and Mobile Menu Button */}
-          <div className="flex items-center gap-3">
-            {/* 18+ Badge */}
-            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-[#FFD700] to-[#FFC700] border-2 border-[#FFD700]/50 shadow-lg shadow-[#FFD700]/30">
-              <span className="text-black font-black text-sm">18+</span>
+          <div className="flex items-center gap-2 md:gap-3">
+            {/* 18+ Badge - Smaller on mobile */}
+            <div className="flex items-center justify-center w-9 h-9 md:w-12 md:h-12 rounded-full bg-gradient-to-br from-[#FFD700] to-[#FFC700] border-2 border-[#FFD700]/50 shadow-lg shadow-[#FFD700]/30">
+              <span className="text-black font-black text-xs md:text-sm">18+</span>
             </div>
             
             {/* Mobile Menu Button */}

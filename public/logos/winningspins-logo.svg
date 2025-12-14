@@ -1,0 +1,30 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="cardGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFC700;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Back card (slightly offset) -->
+  <rect x="14" y="6" width="28" height="40" rx="3" fill="#1A1A24" stroke="url(#cardGold)" stroke-width="2"/>
+  
+  <!-- Front card (Ace of Spades) -->
+  <rect x="8" y="4" width="28" height="40" rx="3" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+  
+  <!-- Top-left A -->
+  <text x="11" y="13" font-family="Arial, sans-serif" font-weight="900" font-size="8" fill="#000000">A</text>
+  
+  <!-- Top-left spade symbol (small) -->
+  <path d="M 14 16 Q 14 14 15.5 13 Q 17 14 17 16 Q 17 17 15.5 17.5 L 15.5 18.5 L 16.5 18.5 L 16.5 19 L 14.5 19 L 14.5 18.5 L 15.5 18.5 L 15.5 17.5 Q 14 17 14 16 Z" fill="#000000"/>
+  
+  <!-- Center large spade symbol -->
+  <path d="M 22 20 Q 22 15 26 12 Q 30 15 30 20 Q 30 23 26 24.5 L 26 27 L 28 27 L 28 28 L 24 28 L 24 27 L 26 27 L 26 24.5 Q 22 23 22 20 Z" fill="url(#cardGold)"/>
+  
+  <!-- Bottom-right A (upside down) -->
+  <text x="32" y="42" font-family="Arial, sans-serif" font-weight="900" font-size="8" fill="#000000" transform="rotate(180 32 38)">A</text>
+  
+  <!-- Bottom-right spade symbol (small, upside down) -->
+  <path d="M 35 35 Q 35 33 33.5 32 Q 32 33 32 35 Q 32 36 33.5 36.5 L 33.5 37.5 L 32.5 37.5 L 32.5 38 L 34.5 38 L 34.5 37.5 L 33.5 37.5 L 33.5 36.5 Q 35 36 35 35 Z" fill="#000000" transform="rotate(180 33.5 35)"/>
+</svg>

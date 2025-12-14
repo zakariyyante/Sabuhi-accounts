@@ -7,18 +7,22 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Logo and Branding */}
         <div className="py-12 border-b border-[#2D2D3D]">
-          <div className="flex items-center mb-6">
-            <div className="relative w-64 h-14">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="relative w-12 h-12 flex-shrink-0">
               <Image
-                src="/logos/top15bestcasinosuk-logo.svg"
-                alt={siteConfig.name}
+                src="/logos/winningspins-logo.svg"
+                alt="Casino Chip"
                 fill
                 className="object-contain"
               />
             </div>
+            <div className="flex flex-col leading-tight">
+              <span className="text-white font-black text-3xl">WinningSpins</span>
+              <span className="text-[#FFD700] font-bold text-lg">.uk</span>
+            </div>
           </div>
           <p className="text-[#A1A1AA] text-base max-w-3xl leading-relaxed">
-            Your trusted guide to the UK's premier online casinos. We provide expert reviews, exclusive bonuses, and comprehensive comparisons of UKGC-licensed platforms to help you find the perfect gaming destination.
+            Your trusted guide to the UK's premier online casinos. We provide expert reviews, exclusive bonuses, and comprehensive comparisons of UKGC-licensed platforms. Spin with confidence at {siteConfig.name}.
           </p>
         </div>
 
@@ -105,7 +109,7 @@ export default function Footer() {
         <div className="border-t border-[#2D2D3D] py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[#A1A1AA] text-sm">
-              &copy; 2025 {siteConfig.name}. All rights reserved.
+              &copy; 2025 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] to-[#FFC700] font-bold">{siteConfig.name}</span>. All rights reserved.
             </p>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-xs text-[#A1A1AA]">
