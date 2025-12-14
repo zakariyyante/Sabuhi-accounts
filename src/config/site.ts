@@ -19,8 +19,8 @@ export const siteConfig = {
   
   // Hero section content
   hero: {
-    headline: "UK's Premier Casino Comparison",
-    subheadline: "Spin. Win. Repeat.",
+    headline: "Top Rated UK Casinos DECEMBER 2025",
+    subheadline: "Win with the best!",
     subtext: "Expert-curated online casinos with verified bonuses, instant payouts, and full UK Gambling Commission licensing. Your path to premium gaming starts here.",
   },
   
