@@ -28,54 +28,59 @@ export const siteConfig = {
   casinos: [
     {
       name: "BetNinja",
-      logo: "BetNinja.png", // Change this filename to switch logos
+      logo: "BetNinja.png",
       bonus: "£1000 + 100 FS",
       rating: 10.0,
-      playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-UK03ZZ&s2="
+      playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-UK03ZZ&s2=",
+      mobile: true
     },
     {
       name: "SlotExpress",
-      logo: "SlotExpress-Casino.webp", // Change this filename to switch logos
+      logo: "SlotExpress-Casino.webp",
       bonus: "Up to £1,000 + 200 FS",
       rating: 9.8,
-      playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-UK03ZZ&payload="
+      playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-UK03ZZ&payload=",
+      mobile: true
     },
     {
       name: "Superspins",
-      logo: "super spin (1).svg", // Change this filename to switch logos
+      logo: "super spin (1).svg",
       bonus: "725% up to £6250 + 425 FS",
       rating: 9.6,
-      playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-UK03ZZ&visit_id="
+      playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-UK03ZZ&visit_id=",
+      mobile: true
     },
     {
       name: "30Bet",
-      logo: "30Bet.gif", // Change this filename to switch logos
+      logo: "30Bet.gif",
       bonus: "Up to £100 + 50 FS",
       rating: 9.4,
-      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-UK03ZZ&payload="
+      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-UK03ZZ&payload=",
+      mobile: true
     },
-    
     {
       name: "RollySpin",
-      logo: "rollyspins.svg", // Change this filename to switch logos
+      logo: "rollyspins.svg",
       bonus: "425% up to £4250 + 425 FS",
       rating: 9.2,
-      playLink: "https://rollyspin19.net/d8hyrrn6u?subid=RollySpin-UK03ZZ&visit_id="
+      playLink: "https://rollyspin19.net/d8hyrrn6u?subid=RollySpin-UK03ZZ&visit_id=",
+      mobile: true
     },
-    
     {
       name: "WinOlympia",
-      logo: "Winolimpia.png", // Change this filename to switch logos
+      logo: "Winolimpia.png",
       bonus: "425% up to £4250 + 425 FS",
       rating: 9.0,
-      playLink: "https://tokenaffstracker.com/j5scxt5kf?subid=WinOlympia-UK03ZZ&visit_id="
+      playLink: "https://tokenaffstracker.com/j5scxt5kf?subid=WinOlympia-UK03ZZ&visit_id=",
+      mobile: true
     },
     {
       name: "Lizaro",
-      logo: "lizaro.webp", // Change this filename to switch logos
+      logo: "lizaro.webp",
       bonus: "250% up to £2,550 + 350 FS + 1 Bonus Crab",
       rating: 8.8,
-      playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-UK03ZZ&aff_click_id="
+      playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-UK03ZZ&aff_click_id=",
+      mobile: true
     },
     {
       name: "Karamba",
