@@ -28,10 +28,10 @@ export const siteConfig = {
   casinos: [
     {
       name: "Karamba",
-      logo: "karamba.svg",
-      bonus: "Welcome Bonus\nUp to £200",
-      rating: 9.5,
-      playLink: "https://karamba.com/welcome-offer",
+      logo: "Logo-Karamba.svg",
+      bonus: "100% UP TO £250\n250 Free Spins",
+      rating: 8.0,
+      playLink: "https://go.karambaaffiliates.com/visit/?bta=40838&nci=6499&utm_campaign=Karamba-CXUK01ZZ&afp=",
       mobile: false, // Default brand - always shows
     },
     {
