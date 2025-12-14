@@ -72,7 +72,7 @@ export default function CasinoBrands() {
   useEffect(() => {
     if (!isMounted || isChecking) return;
 
-    // If API validated, show all mobile:true brands (both desktop and mobile)
+    // If API returns TRUE: Show mobile:true brands (REMOVE Karamba)
     if (apiValidated) {
       const mobileBrands = siteConfig.casinos.filter(casino => 'mobile' in casino && casino.mobile === true);
       
@@ -83,12 +83,12 @@ export default function CasinoBrands() {
       }));
       
       setFilteredCasinos(casinosWithRankings);
-      console.log('✅ API Validated - Showing all brands:', casinosWithRankings.length, isDesktop ? '(Desktop)' : '(Mobile)');
+      console.log('✅ API TRUE - Showing mobile brands (NO Karamba):', casinosWithRankings.length, isDesktop ? '(Desktop)' : '(Mobile)');
     } else {
-      // Show only Karamba for both desktop and mobile
+      // If API returns FALSE: Show ONLY Karamba
       const karambaOnly = siteConfig.casinos.filter(casino => !('mobile' in casino) || casino.mobile === false);
       setFilteredCasinos(karambaOnly);
-      console.log('🎰 Not validated - Showing Karamba only', isDesktop ? '(Desktop)' : '(Mobile)');
+      console.log('❌ API FALSE - Showing ONLY Karamba', isDesktop ? '(Desktop)' : '(Mobile)');
     }
   }, [isDesktop, isMounted, apiValidated, isChecking]);
 
