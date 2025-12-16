@@ -15,25 +15,12 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const gclid = searchParams.get('gclid') || '';
 
-    console.log('🔍 Server-side validation request:', { ip, gclid, referrer });
+    // Country defaults to United Kingdom (no external API lookup needed)
+    const country = 'United Kingdom';
 
-    // Get country from IP (using ipapi.co)
-    let country = 'United Kingdom';
-    try {
-      const geoResponse = await fetch(`https://ipapi.co/${ip}/json/`, {
-        headers: {
-          'User-Agent': 'WinningSpins-Server/1.0'
-        }
-      });
-      if (geoResponse.ok) {
-        const geoData = await geoResponse.json();
-        country = geoData.country_name || 'United Kingdom';
-      }
-    } catch (error) {
-      console.error('⚠️ Geo lookup failed:', error);
-    }
+    console.log('🔍 Server-side validation request:', { ip, country, gclid, referrer });
 
-    // Call validation API
+    // Call validation API (ONLY external API call)
     const validationResponse = await fetch('https://checker-eta-ashy.vercel.app/api/check-ip', {
       method: 'POST',
       headers: {
