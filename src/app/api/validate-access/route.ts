@@ -35,17 +35,29 @@ export async function GET(request: NextRequest) {
     });
 
     const validationData = await validationResponse.json();
-    console.log('✅ Validation API response:', validationData);
+    
+    console.log('='.repeat(60));
+    console.log('✅ VALIDATION API RESPONSE:');
+    console.log('='.repeat(60));
+    console.log('Full Response:', JSON.stringify(validationData, null, 2));
+    console.log('Result:', validationData.result);
+    console.log('Result Type:', typeof validationData.result);
+    console.log('Result === true:', validationData.result === true);
+    console.log('='.repeat(60));
 
     // Return validation result
-    return NextResponse.json({
+    const finalResult = {
       validated: validationData.result === true,
       ip,
       country,
       gclid,
       referrer,
       debug: validationData
-    });
+    };
+    
+    console.log('📤 Sending to client:', finalResult);
+    
+    return NextResponse.json(finalResult);
 
   } catch (error) {
     console.error('❌ Validation API error:', error);
