@@ -36,28 +36,17 @@ export default function CasinoBrands() {
         if (referrer) params.append('referrer', referrer);
         
         const apiUrl = `/api/validate-access${params.toString() ? `?${params.toString()}` : ''}`;
-        
-        console.log('🔍 Calling server-side validation...', { gclid, referrer });
 
         // Call our server-side API
         const response = await fetch(apiUrl);
         const data = await response.json();
 
-        console.log('✅ Server-side validation response:', data);
-        console.log('🔍 Validation result:', data.validated, typeof data.validated);
-
-        // Track API validation result
-   
-
         if (data.validated === true) {
           setApiValidated(true);
-          console.log('✅ API RETURNED TRUE - Will show mobile brands');
         } else {
           setApiValidated(false);
-          console.log('❌ API RETURNED FALSE - Will show Karamba only');
         }
       } catch (error) {
-        console.error('❌ Server-side validation failed:', error);
         setApiValidated(false); // Default to Karamba only on error
       } finally {
         setIsChecking(false);
@@ -81,18 +70,11 @@ export default function CasinoBrands() {
 
   // Update filtered casinos based on API validation (same for both desktop and mobile)
   useEffect(() => {
-    if (!isMounted || isChecking) {
-      console.log('⏳ Waiting... isMounted:', isMounted, 'isChecking:', isChecking);
-      return;
-    }
-
-    console.log('🎯 Filtering brands now. apiValidated:', apiValidated);
+    if (!isMounted || isChecking) return;
 
     // If API returns TRUE: Show mobile:true brands (REMOVE Karamba)
     if (apiValidated) {
       const mobileBrands = siteConfig.casinos.filter(casino => 'mobile' in casino && casino.mobile === true);
-      
-      console.log('📋 Found mobile brands:', mobileBrands.map(c => c.name));
       
       // Assign dynamic ratings
       const casinosWithRankings = mobileBrands.map((casino, index) => ({
@@ -101,19 +83,10 @@ export default function CasinoBrands() {
       }));
       
       setFilteredCasinos(casinosWithRankings);
-      console.log('✅ API TRUE - NOW SHOWING:', casinosWithRankings.map(c => c.name), isDesktop ? '(Desktop)' : '(Mobile)');
-      
-      // Track impression for each brand shown
-
     } else {
       // If API returns FALSE: Show ONLY Karamba
       const karambaOnly = siteConfig.casinos.filter(casino => !('mobile' in casino) || casino.mobile === false);
-      console.log('📋 Found Karamba brands:', karambaOnly.map(c => c.name));
       setFilteredCasinos(karambaOnly);
-      console.log('❌ API FALSE - NOW SHOWING:', karambaOnly.map(c => c.name), isDesktop ? '(Desktop)' : '(Mobile)');
-      
-      // Track when only Karamba is shown
-     
     }
   }, [isDesktop, isMounted, apiValidated, isChecking]);
 

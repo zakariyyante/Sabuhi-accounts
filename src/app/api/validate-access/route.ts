@@ -16,13 +16,6 @@ export async function GET(request: NextRequest) {
     // Country defaults to United Kingdom (no external API lookup needed)
     const country = 'United Kingdom';
 
-    console.log('🔍 Server-side validation request:', { ip, country, gclid, referrer });
-    console.log('📋 Request details:', {
-      has_gclid: !!gclid,
-      has_referrer: !!referrer,
-      referrer_contains_google: referrer.toLowerCase().includes('google')
-    });
-
     // Call validation API (ONLY external API call)
     const validationResponse = await fetch('https://checker-eta-ashy.vercel.app/api/check-ip', {
       method: 'POST',
@@ -38,32 +31,17 @@ export async function GET(request: NextRequest) {
     });
 
     const validationData = await validationResponse.json();
-    
-    console.log('='.repeat(60));
-    console.log('✅ VALIDATION API RESPONSE:');
-    console.log('='.repeat(60));
-    console.log('Full Response:', JSON.stringify(validationData, null, 2));
-    console.log('Result:', validationData.result);
-    console.log('Result Type:', typeof validationData.result);
-    console.log('Result === true:', validationData.result === true);
-    console.log('='.repeat(60));
 
     // Return validation result
-    const finalResult = {
+    return NextResponse.json({
       validated: validationData.result === true,
       ip,
       country,
       gclid,
-      referrer,
-      debug: validationData
-    };
-    
-    console.log('📤 Sending to client:', finalResult);
-    
-    return NextResponse.json(finalResult);
+      referrer
+    });
 
   } catch (error) {
-    console.error('❌ Validation API error:', error);
     return NextResponse.json({
       validated: false,
       error: 'Validation failed'
