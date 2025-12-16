@@ -27,11 +27,11 @@ export const siteConfig = {
   // Casino brands data
   casinos: [
     {
-      name: "BetNinja",
-      logo: "BetNinja.png",
-      bonus: "£1000 + 100 FS",
+      name: "Superspins",
+      logo: "super spin (1).svg",
+      bonus: "725% up to £6250 + 425 FS",
       rating: 10.0,
-      playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-UK03ZZ&s2=",
+      playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-UK03ZZ&visit_id=",
       mobile: true
     },
     {
@@ -42,14 +42,16 @@ export const siteConfig = {
       playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-UK03ZZ&payload=",
       mobile: true
     },
+    
     {
-      name: "Superspins",
-      logo: "super spin (1).svg",
-      bonus: "725% up to £6250 + 425 FS",
+      name: "BetNinja",
+      logo: "BetNinja.png",
+      bonus: "£1000 + 100 FS",
       rating: 9.6,
-      playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-UK03ZZ&visit_id=",
+      playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-UK03ZZ&s2=",
       mobile: true
     },
+    
     {
       name: "30Bet",
       logo: "30Bet.gif",
