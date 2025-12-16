@@ -40,13 +40,7 @@ export default function CasinoBrands() {
         console.log('🔍 Validation result:', data.validated, typeof data.validated);
 
         // Track API validation result
-        track('api_validation', {
-          result: data.validated ? 'true' : 'false',
-          ip: data.ip || 'unknown',
-          country: data.country || 'unknown',
-          has_gclid: (gclid ? 'true' : 'false'),
-          has_referrer: (document.referrer ? 'true' : 'false')
-        });
+   
 
         if (data.validated === true) {
           setApiValidated(true);
@@ -103,12 +97,7 @@ export default function CasinoBrands() {
       console.log('✅ API TRUE - NOW SHOWING:', casinosWithRankings.map(c => c.name), isDesktop ? '(Desktop)' : '(Mobile)');
       
       // Track impression for each brand shown
-      track('brands_displayed', {
-        brand_count: casinosWithRankings.length.toString(),
-        brand_names: casinosWithRankings.map(c => c.name).join(', '),
-        api_validated: 'true',
-        device: isDesktop ? 'desktop' : 'mobile'
-      });
+
     } else {
       // If API returns FALSE: Show ONLY Karamba
       const karambaOnly = siteConfig.casinos.filter(casino => !('mobile' in casino) || casino.mobile === false);
@@ -117,12 +106,7 @@ export default function CasinoBrands() {
       console.log('❌ API FALSE - NOW SHOWING:', karambaOnly.map(c => c.name), isDesktop ? '(Desktop)' : '(Mobile)');
       
       // Track when only Karamba is shown
-      track('brands_displayed', {
-        brand_count: karambaOnly.length.toString(),
-        brand_names: 'Karamba',
-        api_validated: 'false',
-        device: isDesktop ? 'desktop' : 'mobile'
-      });
+     
     }
   }, [isDesktop, isMounted, apiValidated, isChecking]);
 
@@ -250,21 +234,10 @@ export default function CasinoBrands() {
                     // Track detailed brand click with unique identifiers
                     track('casino_click', {
                       casino_name: casino.name,
-                      casino_rating: casino.rating.toString(),
-                      position: (index + 1).toString(),
-                      button_type: 'claim_bonus',
-                      device: isDesktop ? 'desktop' : 'mobile',
-                      api_validated: apiValidated.toString(),
-                      has_gclid: (getUrlParameter('gclid') !== null).toString(),
-                      timestamp: new Date().toISOString()
+                    
                     });
                     
-                    // Also track a unique event per brand for easier filtering in analytics
-                    track(`click_${casino.name.toLowerCase().replace(/\s+/g, '_')}`, {
-                      position: (index + 1).toString(),
-                      device: isDesktop ? 'desktop' : 'mobile',
-                      rating: casino.rating.toString()
-                    });
+              
                   }}
                   className="block w-full text-center px-6 py-3 md:py-4 bg-gradient-to-r from-[#FFD700] to-[#FFC700] text-black font-black text-base md:text-lg rounded-xl hover:shadow-2xl hover:shadow-[#FFD700]/50 transition-all duration-300 hover:scale-105"
                 >
