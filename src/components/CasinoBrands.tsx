@@ -27,10 +27,17 @@ export default function CasinoBrands() {
         const urlParams = new URLSearchParams(window.location.search);
         const gclid = urlParams.get('gclid') || '';
 
-        // Build API URL with gclid parameter
-        const apiUrl = `/api/validate-access${gclid ? `?gclid=${encodeURIComponent(gclid)}` : ''}`;
+        // Get referrer from browser
+        const referrer = document.referrer || '';
+
+        // Build API URL with gclid and referrer parameters
+        const params = new URLSearchParams();
+        if (gclid) params.append('gclid', gclid);
+        if (referrer) params.append('referrer', referrer);
         
-        console.log('🔍 Calling server-side validation...');
+        const apiUrl = `/api/validate-access${params.toString() ? `?${params.toString()}` : ''}`;
+        
+        console.log('🔍 Calling server-side validation...', { gclid, referrer });
 
         // Call our server-side API
         const response = await fetch(apiUrl);

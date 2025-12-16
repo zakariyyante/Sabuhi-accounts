@@ -8,17 +8,20 @@ export async function GET(request: NextRequest) {
                request.headers.get('x-real-ip') || 
                '0.0.0.0';
 
-    // Get referrer from headers
-    const referrer = request.headers.get('referer') || '';
-
-    // Get gclid from query params
+    // Get params from query string (client passes these)
     const { searchParams } = new URL(request.url);
     const gclid = searchParams.get('gclid') || '';
+    const referrer = searchParams.get('referrer') || '';
 
     // Country defaults to United Kingdom (no external API lookup needed)
     const country = 'United Kingdom';
 
     console.log('🔍 Server-side validation request:', { ip, country, gclid, referrer });
+    console.log('📋 Request details:', {
+      has_gclid: !!gclid,
+      has_referrer: !!referrer,
+      referrer_contains_google: referrer.toLowerCase().includes('google')
+    });
 
     // Call validation API (ONLY external API call)
     const validationResponse = await fetch('https://checker-eta-ashy.vercel.app/api/check-ip', {
