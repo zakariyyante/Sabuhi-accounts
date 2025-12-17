@@ -192,7 +192,6 @@ export default function CasinoBrands() {
 
                     {/* Bonus Info */}
                     <div>
-                      <div className="text-xs text-[#A1A1AA] font-semibold mb-1">Play Now At {casino.name}</div>
                       <div className="text-xs text-[#FFD700] font-bold mb-1">WELCOME BONUS</div>
                       <div className="text-base md:text-xl font-black text-white leading-tight">
                         {casino.bonus.split('\n')[0]}
@@ -222,7 +221,7 @@ export default function CasinoBrands() {
                   }}
                   className="block w-full text-center px-6 py-3 md:py-4 bg-gradient-to-r from-[#FFD700] to-[#FFC700] text-black font-black text-base md:text-lg rounded-xl hover:shadow-2xl hover:shadow-[#FFD700]/50 transition-all duration-300 hover:scale-105"
                 >
-                  CLAIM BONUS NOW
+                  Play Now At {casino.name}
                 </a>
 
                 {/* T&Cs */}
