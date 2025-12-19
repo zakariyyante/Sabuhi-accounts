@@ -1,27 +1,27 @@
 export const siteConfig = {
   // Basic site information
-  name: "Winning Spins",
-  description: "Discover the UK's most trusted online casinos. Expert reviews, exclusive bonuses, and instant withdrawals.",
-  url: "https://winningspins.uk",
+  name: "10Casinos.uk",
+  description: "Compare UK's top 10 online casinos. Licensed, secure, and trusted platforms with exclusive welcome offers.",
+  url: "https://10casinos.uk",
   
-  // Brand colors - Premium dark theme with gold accents
+  // Brand colors - Electric blue with vibrant accents
   colors: {
-    primary: "#FFD700",    // Gold - premium & luxury
-    secondary: "#8B5CF6",  // Purple - modern & vibrant
-    accent: "#10B981",     // Emerald - success & trust
-    background: "#0A0A0F", // Deep dark background
-    surface: "#1A1A24",    // Dark surface
-    surfaceLight: "#242433", // Lighter surface
+    primary: "#3B82F6",    // Electric Blue - trust & energy
+    secondary: "#06B6D4",  // Cyan - modern & fresh
+    accent: "#F59E0B",     // Amber - excitement & warmth
+    background: "#0F172A", // Deep navy background
+    surface: "#1E293B",    // Slate surface
+    surfaceLight: "#334155", // Lighter slate surface
     text: "#FFFFFF",       // Pure white text
-    textSecondary: "#A1A1AA", // Gray text
-    border: "#2D2D3D",     // Subtle borders
+    textSecondary: "#94A3B8", // Light slate text
+    border: "#475569",     // Slate borders
   },
   
   // Hero section content
   hero: {
-    headline: "Top Rated UK Casinos DECEMBER 2025",
-    subheadline: "Win with the best!",
-    subtext: "Expert-curated online casinos with verified bonuses, instant payouts, and full UK Gambling Commission licensing. Your path to premium gaming starts here.",
+    headline: "Compare UK's Best 10 Casinos",
+    subheadline: "",
+    subtext: "Hand-selected UKGC licensed operators featuring exclusive promotions, secure banking, and rapid payouts. Find your perfect casino match today.",
   },
   
   // Casino brands data
@@ -111,7 +111,7 @@ export const siteConfig = {
   
   // Contact information
   contact: {
-    email: "info@winningspins.uk"
+    email: "info@10casinos.uk"
   }
 };
 

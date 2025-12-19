@@ -1,0 +1,25 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="amberGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FBBF24;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="30" cy="30" r="28" fill="url(#blueGradient)" opacity="0.1"/>
+  <circle cx="30" cy="30" r="28" fill="none" stroke="url(#blueGradient)" stroke-width="3"/>
+  
+  <!-- Number 10 in the center -->
+  <text x="30" y="42" font-family="Arial Black, sans-serif" font-weight="900" font-size="32" fill="url(#blueGradient)" text-anchor="middle">10</text>
+  
+  <!-- Small decorative stars -->
+  <path d="M 15 12 L 16 15 L 19 15 L 17 17 L 18 20 L 15 18 L 12 20 L 13 17 L 11 15 L 14 15 Z" fill="url(#amberGradient)"/>
+  <path d="M 45 12 L 46 15 L 49 15 L 47 17 L 48 20 L 45 18 L 42 20 L 43 17 L 41 15 L 44 15 Z" fill="url(#amberGradient)"/>
+</svg>
+

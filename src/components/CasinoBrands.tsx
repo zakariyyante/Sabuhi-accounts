@@ -122,11 +122,11 @@ export default function CasinoBrands() {
   }
 
   return (
-    <section id="casinos" className="py-4 md:py-20 bg-[#0A0A0F] relative overflow-hidden">
+    <section id="casinos" className="py-4 md:py-20 bg-gradient-to-b from-[#0F172A] to-[#1E293B] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden opacity-5">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6] rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#FFD700] rounded-full filter blur-3xl"></div>
+      <div className="absolute inset-0 overflow-hidden opacity-10">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#3B82F6] rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#06B6D4] rounded-full filter blur-3xl"></div>
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 md:px-6">
@@ -136,10 +136,10 @@ export default function CasinoBrands() {
           {filteredCasinos.map((casino, index) => {
             // Different badge text for each position
             const badges = [
-              { text: 'EXCLUSIVE', color: 'from-[#FFD700] to-[#FFC700]' },
-              { text: 'HOT', color: 'from-[#FF6B6B] to-[#FF8E53]' },
-              { text: 'TOP TIER', color: 'from-[#8B5CF6] to-[#7C3AED]' },
-              { text: 'POPULAR', color: 'from-[#10B981] to-[#059669]' }
+              { text: 'TOP CHOICE', color: 'from-[#3B82F6] to-[#06B6D4]' },
+              { text: 'HOT DEAL', color: 'from-[#F59E0B] to-[#FBBF24]' },
+              { text: 'FEATURED', color: 'from-[#3B82F6] to-[#8B5CF6]' },
+              { text: 'TRENDING', color: 'from-[#06B6D4] to-[#10B981]' }
             ];
             const badge = badges[index] || badges[badges.length - 1];
 
@@ -155,13 +155,13 @@ export default function CasinoBrands() {
                 </div>
               </div>
 
-              <div className="group bg-gradient-to-br from-[#1A1A24] to-[#242433] rounded-2xl md:rounded-3xl border border-[#2D2D3D] hover:border-[#FFD700]/50 transition-all duration-300 overflow-hidden hover:shadow-2xl hover:shadow-[#FFD700]/20">
+              <div className="group bg-gradient-to-br from-[#1E293B] to-[#334155] rounded-2xl md:rounded-3xl border border-[#475569] hover:border-[#3B82F6] transition-all duration-300 overflow-hidden hover:shadow-2xl hover:shadow-[#3B82F6]/30">
                 <div className="p-3 md:p-6">
                 {/* Top Section: Logo Left, Details Right */}
                 <div className="flex items-start gap-3 md:gap-6 mb-3 md:mb-4">
                   {/* Logo - Bigger */}
                   <div className="flex-shrink-0">
-                    <div className="relative h-24 w-40 md:h-40 md:w-64 bg-white/5 rounded-xl p-3 md:p-5 flex items-center justify-center backdrop-blur-sm border border-[#2D2D3D]">
+                    <div className="relative h-24 w-40 md:h-40 md:w-64 bg-white/5 rounded-xl p-3 md:p-5 flex items-center justify-center backdrop-blur-sm border border-[#475569]">
                       <Image
                         src={`/casino-logos/${casino.logo}`}
                         alt={casino.name}
@@ -177,12 +177,12 @@ export default function CasinoBrands() {
                     <div className="flex items-center gap-2 mb-3 md:mb-4">
                       <div className="flex items-center gap-0.5">
                         {[1, 2, 3, 4, 5].map((star) => (
-                          <svg
-                            key={star}
-                            className={`w-4 h-4 md:w-5 md:h-5 ${star <= Math.round(casino.rating) ? 'text-[#FFD700]' : 'text-[#2D2D3D]'}`}
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
+                        <svg
+                          key={star}
+                          className={`w-4 h-4 md:w-5 md:h-5 ${star <= Math.round(casino.rating) ? 'text-[#F59E0B]' : 'text-[#475569]'}`}
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                           </svg>
                         ))}
@@ -192,12 +192,12 @@ export default function CasinoBrands() {
 
                     {/* Bonus Info */}
                     <div>
-                      <div className="text-xs text-[#FFD700] font-bold mb-1">WELCOME BONUS</div>
+                      <div className="text-xs text-[#3B82F6] font-bold mb-1">EXCLUSIVE OFFER</div>
                       <div className="text-base md:text-xl font-black text-white leading-tight">
                         {casino.bonus.split('\n')[0]}
                       </div>
                       {casino.bonus.includes('\n') && (
-                        <div className="text-sm md:text-lg font-bold text-[#8B5CF6] leading-tight mt-1">
+                        <div className="text-sm md:text-lg font-bold text-[#06B6D4] leading-tight mt-1">
                           {casino.bonus.split('\n')[1]}
                         </div>
                       )}
@@ -219,7 +219,7 @@ export default function CasinoBrands() {
                     
               
                   }}
-                  className="block w-full text-center px-6 py-3 md:py-4 bg-gradient-to-r from-[#FFD700] to-[#FFC700] text-black font-black text-base md:text-lg rounded-xl hover:shadow-2xl hover:shadow-[#FFD700]/50 transition-all duration-300 hover:scale-105"
+                  className="block w-full text-center px-6 py-3 md:py-4 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white font-black text-base md:text-lg rounded-xl hover:shadow-2xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105"
                 >
                   Play Now At {casino.name}
                 </a>
