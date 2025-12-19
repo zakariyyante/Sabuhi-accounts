@@ -27,6 +27,14 @@ export const siteConfig = {
   // Casino brands data
   casinos: [
     {
+      name: "30Bet",
+      logo: "30Bet.gif",
+      bonus: "Up to £100 + 50 FS",
+      rating: 10.0,
+      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-UK03ZZ&payload=",
+      mobile: true
+    },
+    {
       name: "BetNinja",
       logo: "BetNinja-Casino.svg",
       bonus: "£1000 + 100 FS",
@@ -47,14 +55,7 @@ export const siteConfig = {
 
 
     },
-    // {
-    //   name: "30Bet",
-    //   logo: "30Bet.gif",
-    //   bonus: "Up to £100 + 50 FS",
-    //   rating: 10.0,
-    //   playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-UK03ZZ&payload=",
-    //   mobile: true
-    // },
+   
     
     {
       name: "Superspins",
