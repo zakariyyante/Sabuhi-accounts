@@ -86,16 +86,16 @@ export const siteConfig = {
 
 
     },
-    {
-      name: "Lizaro",
-      logo: "lizaro.webp",
-      bonus: "250% up to £2,550 + 350 FS + 1 Bonus Crab",
-      rating: 9.4,
-      playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-UK03ZZ&aff_click_id=",
-      mobile: true
+    // {
+    //   name: "Lizaro",
+    //   logo: "lizaro.webp",
+    //   bonus: "250% up to £2,550 + 350 FS + 1 Bonus Crab",
+    //   rating: 9.4,
+    //   playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-UK03ZZ&aff_click_id=",
+    //   mobile: true
 
 
-    },
+    // },
     {
       name: "Karamba",
       logo: "Logo-Karamba.svg",
