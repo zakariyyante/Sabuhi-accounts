@@ -27,13 +27,14 @@ export const siteConfig = {
   // Casino brands data
   casinos: [
     {
-      name: "30Bet",
-      logo: "30Bet.gif",
-      bonus: "Up to £100 + 50 FS",
-      rating: 10.0,
-      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-UK03ZZ&payload=",
+      name: "BetNinja",
+      logo: "BetNinja.png",
+      bonus: "£1000 + 100 FS",
+      rating: 9.8,
+      playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-UK03ZZ&s2=",
       mobile: true
     },
+
     {
       name: "SlotExpress",
       logo: "SlotExpress-Casino.webp",
@@ -42,14 +43,15 @@ export const siteConfig = {
       playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-UK03ZZ&payload=",
       mobile: true
     },
-    {
-      name: "BetNinja",
-      logo: "BetNinja.png",
-      bonus: "£1000 + 100 FS",
-      rating: 9.8,
-      playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-UK03ZZ&s2=",
-      mobile: true
-    },
+    // {
+    //   name: "30Bet",
+    //   logo: "30Bet.gif",
+    //   bonus: "Up to £100 + 50 FS",
+    //   rating: 10.0,
+    //   playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-UK03ZZ&payload=",
+    //   mobile: true
+    // },
+    
     {
       name: "Superspins",
       logo: "super spin (1).svg",
@@ -59,19 +61,19 @@ export const siteConfig = {
       mobile: true
     },
     {
-      name: "RollySpin",
-      logo: "rollyspins.svg",
-      bonus: "425% up to £4250 + 425 FS",
+      name: "Spinshark",
+      logo: "spinshark.svg",
+      bonus: "150% UP TO £900 + 150 FS",
       rating: 9.6,
-      playLink: "https://rollyspin19.net/d8hyrrn6u?subid=RollySpin-UK03ZZ&visit_id=",
+      playLink: "https://spinshark.site/jyqc8t242?subid=SpinShark-UK03ZZ&visit_id=",
       mobile: true
     },
     {
-      name: "WinOlympia",
-      logo: "Winolimpia.png",
-      bonus: "425% up to £4250 + 425 FS",
+      name: "BeOnBet",
+      logo: "beonbet.webp",
+      bonus: "400% UP TO £2.450 + 300 FS",
       rating: 9.5,
-      playLink: "https://tokenaffstracker.com/j5scxt5kf?subid=WinOlympia-UK03ZZ&visit_id=",
+      playLink: "https://bestcpa.online/click?o=260&a=36&sub_id1=BeOnBet-UK03ZZ&aff_click_id=",
       mobile: true
     },
     {
