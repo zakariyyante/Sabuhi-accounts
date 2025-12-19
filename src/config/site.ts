@@ -26,74 +26,74 @@ export const siteConfig = {
   
   // Casino brands data
   casinos: [
-    {
-      name: "30Bet",
-      logo: "30Bet.gif",
-      bonus: "Up to £100 + 50 FS",
-      rating: 10.0,
-      playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-UK03ZZ&payload=",
-      mobile: true
-    },
-    {
-      name: "BetNinja",
-      logo: "BetNinja-Casino.svg",
-      bonus: "£1000 + 100 FS",
-      rating: 9.8,
-      playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-UK03ZZ&s2=",
-      mobile: true
+    // {
+    //   name: "30Bet",
+    //   logo: "30Bet.gif",
+    //   bonus: "Up to £100 + 50 FS",
+    //   rating: 10.0,
+    //   playLink: "https://record.betgroup.partners/_YnRh4Sd1bK-RpNYGCjuhmmNd7ZgqdRLk/1/?pg=3&s2s.req_id=30BET-UK03ZZ&payload=",
+    //   mobile: true
+    // },
+    // {
+    //   name: "BetNinja",
+    //   logo: "BetNinja-Casino.svg",
+    //   bonus: "£1000 + 100 FS",
+    //   rating: 9.8,
+    //   playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-UK03ZZ&s2=",
+    //   mobile: true
 
 
-    },
+    // },
 
-    {
-      name: "SlotExpress",
-      logo: "SlotExpress-Casino.webp",
-      bonus: "Up to £1,000 + 200 FS",
-      rating: 9.9,
-      playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-UK03ZZ&payload=",
-      mobile: true
+    // {
+    //   name: "SlotExpress",
+    //   logo: "SlotExpress-Casino.webp",
+    //   bonus: "Up to £1,000 + 200 FS",
+    //   rating: 9.9,
+    //   playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-UK03ZZ&payload=",
+    //   mobile: true
 
 
-    },
+    // },
    
     
-    {
-      name: "Superspins",
-      logo: "super spin (1).svg",
-      bonus: "725% up to £6250 + 425 FS",
-      rating: 9.7,
-      playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-UK03ZZ&visit_id=",
-      mobile: true
-
-
-    },
-    {
-      name: "Spinshark",
-      logo: "spinshark.svg",
-      bonus: "150% UP TO £900 + 150 FS",
-      rating: 9.6,
-      playLink: "https://spinshark.site/jyqc8t242?subid=SpinShark-UK03ZZ&visit_id=",
-      mobile: true
-
-
-    },
-    {
-      name: "BeOnBet",
-      logo: "beonbet.webp",
-      bonus: "400% UP TO £2.450 + 300 FS",
-      rating: 9.5,
-      playLink: "https://bestcpa.online/click?o=260&a=36&sub_id1=BeOnBet-UK03ZZ&aff_click_id=",
-      mobile: true
-
-
-    },
     // {
-    //   name: "Lizaro",
-    //   logo: "lizaro.webp",
-    //   bonus: "250% up to £2,550 + 350 FS + 1 Bonus Crab",
-    //   rating: 9.4,
-    //   playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-UK03ZZ&aff_click_id=",
+    //   name: "Superspins",
+    //   logo: "super spin (1).svg",
+    //   bonus: "725% up to £6250 + 425 FS",
+    //   rating: 9.7,
+    //   playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-UK03ZZ&visit_id=",
     //   mobile: true
+
+
+    // },
+    // {
+    //   name: "Spinshark",
+    //   logo: "spinshark.svg",
+    //   bonus: "150% UP TO £900 + 150 FS",
+    //   rating: 9.6,
+    //   playLink: "https://spinshark.site/jyqc8t242?subid=SpinShark-UK03ZZ&visit_id=",
+    //   mobile: true
+
+
+    // },
+    // {
+    //   name: "BeOnBet",
+    //   logo: "beonbet.webp",
+    //   bonus: "400% UP TO £2.450 + 300 FS",
+    //   rating: 9.5,
+    //   playLink: "https://bestcpa.online/click?o=260&a=36&sub_id1=BeOnBet-UK03ZZ&aff_click_id=",
+    //   mobile: true
+
+
+    // },
+    // // {
+    // //   name: "Lizaro",
+    // //   logo: "lizaro.webp",
+    // //   bonus: "250% up to £2,550 + 350 FS + 1 Bonus Crab",
+    // //   rating: 9.4,
+    // //   playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-UK03ZZ&aff_click_id=",
+    // //   mobile: true
 
 
     // },
