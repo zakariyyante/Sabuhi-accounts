@@ -28,11 +28,13 @@ export const siteConfig = {
   casinos: [
     {
       name: "BetNinja",
-      logo: "BetNinja.png",
+      logo: "BetNinja-Casino.svg",
       bonus: "£1000 + 100 FS",
       rating: 9.8,
       playLink: "https://tidgw.com/?a=274&oc=3267&c=8639&s3=BetNinja-UK03ZZ&s2=",
       mobile: true
+
+
     },
 
     {
@@ -42,6 +44,8 @@ export const siteConfig = {
       rating: 9.9,
       playLink: "https://record.slotexpressaffiliates.com/_XUdgfahaGge2bnhOaaLAUmNd7ZgqdRLk/4/?pg=2&s2s.req_id=SlotExpress-UK03ZZ&payload=",
       mobile: true
+
+
     },
     // {
     //   name: "30Bet",
@@ -59,6 +63,8 @@ export const siteConfig = {
       rating: 9.7,
       playLink: "https://superspins777.net/dhpkgcx7q?subid=Superspins-UK03ZZ&visit_id=",
       mobile: true
+
+
     },
     {
       name: "Spinshark",
@@ -67,6 +73,8 @@ export const siteConfig = {
       rating: 9.6,
       playLink: "https://spinshark.site/jyqc8t242?subid=SpinShark-UK03ZZ&visit_id=",
       mobile: true
+
+
     },
     {
       name: "BeOnBet",
@@ -75,6 +83,8 @@ export const siteConfig = {
       rating: 9.5,
       playLink: "https://bestcpa.online/click?o=260&a=36&sub_id1=BeOnBet-UK03ZZ&aff_click_id=",
       mobile: true
+
+
     },
     {
       name: "Lizaro",
@@ -83,6 +93,8 @@ export const siteConfig = {
       rating: 9.4,
       playLink: "https://bestcpa.online/click?o=184&a=36&sub_id1=Lizaro-UK03ZZ&aff_click_id=",
       mobile: true
+
+
     },
     {
       name: "Karamba",
@@ -90,7 +102,8 @@ export const siteConfig = {
       bonus: "100% UP TO £250\n250 Free Spins",
       rating: 8.0,
       playLink: "https://go.karambaaffiliates.com/visit/?bta=40838&nci=6499&utm_campaign=Karamba-UK03ZZ&afp=",
-      mobile: false, // Default brand - always shows
+      mobile: false
+, // Default brand - always shows
     }
   ],
 

@@ -166,7 +166,7 @@ export default function CasinoBrands() {
                         src={`/casino-logos/${casino.logo}`}
                         alt={casino.name}
                         fill
-                        className="object-contain p-1"
+                        className="object-contain"
                       />
                     </div>
                   </div>
