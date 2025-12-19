@@ -94,7 +94,7 @@ export default function CasinoBrands() {
     if (!trackingValue) return link;
     
     let processedLink = link;
-    const trackingParamNames = ['gclid', 'payload', 'clickid', 'afp', 'gcslid', 'visit_id', 'trackid', 'ref', 'subid'];
+    const trackingParamNames = ['gclid', 'payload', 'clickid', 'afp', 'gcslid', 'visit_id', 'trackid', 'ref', 'subid', 'aff_click_id'];
     
     for (const paramName of trackingParamNames) {
       const emptyParamPattern = new RegExp(`([&?])${paramName}=(?=&|$)`);
