@@ -91,7 +91,7 @@ export const siteConfig = {
       bonus: "100% UP TO £250\n250 Free Spins",
       rating: 8.0,
       playLink: "https://go.karambaaffiliates.com/visit/?bta=40838&nci=6499&utm_campaign=Karamba-UK03ZZ&afp=",
-      mobile: true
+      mobile: false
 
 , // Default brand - always shows
     }
